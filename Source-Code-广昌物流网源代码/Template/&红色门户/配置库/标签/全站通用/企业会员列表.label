@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>393</LabelID>
+    <LabelName>企业会员列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>name,默认值,1,企业名称|City,默认值,1,所在地区|Yewu,默认值,1,主营业务|Service,默认值,1,服务行业</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_U_comp</LabelTable>
+    <LabelField>City,ID,info,logo,lxren,name,Service,Tel,UserID,zyyw</LabelField>
+    <LabelWhere>name like '%@name%' And City like '%@City%' And zyyw like '%@Yewu%' And Service like '%@Service%'</LabelWhere>
+    <LabelOrder>ID ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="qyinfo"&gt;
+		&lt;div class="info_l"&gt;
+			&lt;a href="{ZL:GetLastinfo(24)/}&amp;uid={Field="ID"/}" class="qyface"&gt;&lt;img src="{ZL:GetPicUrl({Field="logo"/})/}" alt="{Field="name"/}"&gt;&lt;/a&gt;
+			&lt;span&gt;&lt;a href="{ZL:GetLastinfo(24)/}&amp;uid={Field="ID"/}"&gt;查看公司信息&lt;/a&gt;&lt;/span&gt;&lt;span&gt;&lt;a href="/ColumnList.aspx?NodeID=49&amp;uid={Field="UserID"/}"&gt;给它留言&lt;/a&gt;&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div class="info_r"&gt;
+			&lt;h2&gt;&lt;a href="{ZL:GetLastinfo(24)/}&amp;uid={Field="ID"/}" target="_blank"&gt;{Field="name"/}&lt;/a&gt;&lt;span&gt;[{Field="City"/}]&lt;/span&gt;&lt;/h2&gt;
+			&lt;p&gt;{ZL:CutText({Field="info"/},150,...)/}&lt;/p&gt;
+			&lt;ul&gt;
+			&lt;li&gt;&lt;span&gt;主营业务：&lt;/span&gt;{Field="zyyw"/}&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;服务行业：&lt;/span&gt;{Field="Service"/}&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;联系人：&lt;/span&gt;{Field="lxren"/}&lt;/li&gt;
+			&lt;li&gt;&lt;span&gt;联系电话：&lt;/span&gt;{Field="Tel"/}&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;hr class="hr"/&gt;
+{/Repeate}
+{ZL.Page/}
+</LabelContent>
+    <LabelCount>20</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>企业列表 - {$SiteName/}</title>
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+<body>
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+	
+<!-- 网站主体 -->
+<div id="mysite">
+	<p>您的位置：<a href="/">广昌物流</a>&gt;&gt;企业列表</p>
+</div>
+
+<div id="main">
+<div id="main_left">
+	<div class="pingdao_tit">物流企业列表</div>
+<!--搜索框-->
+	<form method="post" id="qysearch" action="{ZL:GetNodeLinkUrl(51)/}" target="_self">
+	<div id="qyform">
+		<label>选择地区：</label>
+		<select name="city" id="city">
+			<option value="">全部地区</option>
+			{ZL.Label id="字典数据" cate="1" /}
+		</select>
+		
+		<label>选择业务：</label>
+		<select name="yewu" id="yewu">
+			<option value="">=主营业务=</option>
+			<option value="运输服务">运输服务</option>
+			<option value="仓储服务">仓储服务</option>
+			<option value="区域配送">区域配送</option>
+			<option value="城市配送">城市配送</option>
+			<option value="危险品物流">危险品物流</option>
+			<option value="冷链物流">冷链物流</option>
+			<option value="供应链管理">供应链管理</option>
+			<option value="保税物流">保税物流</option>
+			<option value="物流金融">物流金融</option>
+			<option value="大件物流">大件物流</option>
+			<option value="电子商务物流">电子商务物流</option>
+			<option value="物流地产">物流地产</option>
+			<option value="其它">其它</option>		
+		</select>
+		
+		<label>选择行业：</label>
+		<select name="Service" id="Service">
+			<option value="">=服务行业=</option>
+			<option value="快消品">快消品</option>
+			<option value="零售连锁">零售连锁</option>
+			<option value="家电">家电</option>
+			<option value="消费电子">消费电子</option>
+			<option value="纺织服装">纺织服装</option>
+			<option value="钢铁">钢铁</option>
+			<option value="建材家具">建材家具</option>
+			<option value="石油化工">石油化工</option>
+			<option value="机械">机械</option>
+			<option value="医药">医药</option>
+			<option value="汽车">汽车</option>
+			<option value="能源">能源</option>
+			<option value="农产品">农产品</option>
+			<option value="通讯">通讯</option>
+			<option value="造纸出版印刷">造纸出版印刷</option>
+			<option value="其它">其它</option>		
+		</select>
+		
+		<input type="text" name="name" id="qyname" />
+		<input type="image" src="/skin/gcwuliu/images/qy_search.gif" class="sub" />
+	</div>
+	</form>
+	<div id="qylist">
+	{ZL.Label id="企业会员列表" name="{$PostRequest(name)$}" City="{$PostRequest(city)$}" Yewu="{$PostRequest(yewu)$}" Service="{$PostRequest(Service)$}" /}
+	</div>   
+
+</div><!-- 网站主体左 -->
+{ZL.Label id="网站主体右"/}<!-- 网站主体右 -->
+<div style=" clear:both;"></div>
+</div>
+
+ <!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

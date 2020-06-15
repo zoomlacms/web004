@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px;}
+body{font-size:12px;}
+img{border:none}
+a{text-decoration:none;}
+li{list-style-type:none;}
+.clear{clear:both}
+
+#top_bar_txt,#head,#banner,#nav,#main,#bottom{width:980px; margin:auto; clear:both;}/*全局宽度定义*/
+
+#top_bar{ height:38px; width:100%; background:url(images/gd/top_bg.jpg) repeat-x; clear:both;}
+#top_bar_txt span img{ float:left;  margin-top:5px;}
+#top_bar_txt span a{ display:block; float:left; width:100px;height:38px; line-height:38px; margin-left:10px;}
+#top_bar_txt p{display:block; float:right; width:432px; background:url(images/music_bg.jpg) no-repeat; text-align:center;}
+#top_bar_txt p img{margin-top:5px;}
+
+/*水墨风格*/
+#i_body{background:url(images/gd/body_bg.jpg)}
+#head{height:250px;background:url(images/gd/head.jpg);}
+
+#nav{ height:60px; line-height:60px; background:url(images/gd/nav_bg.jpg);}
+#nav ul{margin-left:20px; padding-top:11px;}
+#nav li{float:left; width:90px; height:38px; line-height:38px; text-align:center;}
+#nav li a{ display:block;width:90px; color:#FFCC33; font-size:14px; font-weight:bold;}
+#nav li a:hover{ width:90px; height:38px; background:#280607;}
+
+#banner{height:84px;}
+
+#main{ margin-top:5px;}
+#main a{color:#000;}
+#main_l{ float:left; width:250px;}
+#main_m{float:left; width:480px; margin-left:5px;}
+#main_r{float:right; width:240px;}
+
+#main_l_k{width:auto;clear:both; background:url(images/gd/main_l_middle.jpg) center; }/*左侧能用块*/
+#main_l_k ul{width:95%; margin:auto}
+#main_l_k ul li{height:26px; line-height:26px;}
+#main_l_k li a,#main_l_k li abbr,#main_l_k li span{display:block; float:left; }
+#main_l_k li a{width:60%;}
+#main_l_k li span{width:20%; text-align:center; }
+#main_r_k img{ display:block;width:auto; margin:auto}
+
+#main_l_k1,#main_l_gg,#main_r_k{width:auto;background:#D3DDDF; background:url(images/gd/main_r_middle.jpg) center}
+#main_l_k1 ul,#main_l_gg ul{width:85%; margin:auto; margin-bottom:5px;}
+#main_l_k1 ul li,#main_l_gg ul li{height:26px; line-height:26px;}
+#main_l_k1 ul li span{float:left;}
+#main_l_k1 ul li a{float:right}
+
+#main_l_k2{width:auto;clear:both; background:#D3DDDF; margin-bottom:10px;}
+#main_l_k2 ul {width:90%; margin:10px auto}
+#main_l_k2 ul li,#main_l_gg ul li{height:26px; line-height:26px;}
+#main_l_k2 ul li span{float:left;}
+#main_l_k2 ul li a{float:right}
+
+#main_m_k{background:url(images/gd/main_m_middle.jpg) center repeat-y}
+#main_m_k ul{width:90%; margin:auto}
+#main_m_k ul li{height:26px; line-height:26px;}
+#main_m_k li a,#main_l_k li abbr,#main_l_k li span{display:block; float:left; }
+#main_m_k li a{width:60%;}
+#main_m_k li span{width:20%; text-align:center; float:right; }
+
+.main_l_top{background:url(images/gd/main_l_top.jpg) top no-repeat; height:10px; overflow:hidden}
+.main_m_top{background:url(images/gd/main_m_top.jpg) top no-repeat; height:16px; overflow:hidden}
+.main_r_top{background:url(images/gd/main_r_top.jpg) top no-repeat; height:10px; overflow:hidden}
+
+.main_l_bottom{background:url(images/gd/main_l_bottom.jpg) center top no-repeat; height:10px; margin-bottom:7px; overflow:hidden; }
+.main_m_bottom{background:url(images/gd/main_m_bottom.jpg) center top no-repeat; height:16px; margin-bottom:5px; overflow:hidden;}
+.main_r_bottom{background:url(images/gd/main_r_bottom.jpg) center top no-repeat; height:10px; margin-bottom:7px; overflow:hidden;}
+
+.list_pic{float:left; width:97px; height:100px; text-align:center; margin:15px 10px; display:inline;}
+.list_pic li{ float:left; width:100%; text-align:center; margin-top:15px;}
+.list_pic img{display:block; margin:auto;}
+
+#main_l_k_t{ margin:auto; width:100%; height:30px; line-height:30px; font-size:16px; font-weight:bold; text-align:center; color:#FFF; background:url(images/gd/main_l_k_t.jpg) center no-repeat; }
+#main_l_k_t1{ margin:auto; width:83.5%; height:30px; line-height:30px; font-size:16px; font-weight:bold; padding-left:40px; color:#FFF; background:url(images/gd/main_l_k_t1.jpg) center no-repeat;}
+#main_l_k_t1 span{float:right; font-size:12px; font-weight:normal; padding-right:15px;color:#FFF; }
+#main_l_k_t1 span a{color:#FFF}
+#main_l_k_t2{margin:auto; width:83.5%; height:30px; line-height:30px; font-size:16px; font-weight:bold;}
+#main_l_k_t2 span{float:right; font-size:12px; font-weight:normal; padding-right:15px;color:#FFF; }
+
+#bottom{background:url(images/gd/bottom.jpg) center; width:980px; height:120px; color:#FFF;}
+#bottom img{ float:left; margin-left:200px; margin-top:30px;}
+#bottom span{ float:right; margin-top:30px; width:600px; line-height:26px; display:block;}

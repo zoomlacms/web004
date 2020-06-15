@@ -1,0 +1,90 @@
+﻿{ZL.Source id="招聘求职数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="招聘求职数据源标签" FD="Title" page="0"/}_{$SiteName/}_内容正文</title>
+<meta name="Keywords" content="{SField sid="招聘求职数据源标签" FD="Tagkey" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+
+<body>
+{ZL.Label id="全部头部"/}
+ <!-- 网站头部结束 -->
+ <!--网站导航-->
+ {ZL.Label id="网站导航"/}
+  <!--网站导航结束-->
+<!-- 网站主体 -->
+<div id="mysite">
+	<p>您的位置：<a href="/">{$SiteName/}</a>>>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="招聘求职数据源标签" FD="NodeID" page="0"/}" /}>><a href="{ZL:GetNodeUrl({SField sid="招聘求职数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="招聘求职数据源标签" FD="NodeID" page="0"/}" /}</a>>>{SField sid="招聘求职数据源标签" FD="Title" page="0"/}</p>
+
+</div>
+<div id="main">
+<div id="main_left">
+
+<div id="neirong">
+	<h1>{SField sid="招聘求职数据源标签" FD="Title" page="0"/}</h1>
+    
+    <abbr><span id="author">作者：{SField sid="招聘求职数据源标签" FD="InPuter" page="0"/}</span> <span id="source">来源：{SField sid="招聘求职数据源标签" FD="source" page="0"/}</span> <span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="招聘求职数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> <span id="Hits">点击数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="招聘求职数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span></abbr>
+<div id="content">
+<div style=" width:99%; float:left;">
+	{SField sid="招聘求职数据源标签" FD="sys" page="0"/}
+    <div style=" clear:both; height:10px;"></div>
+    联系方式：<br/>
+    {SField sid="招聘求职数据源标签" FD="phone" page="0"/}
+</div>    
+    <div style=" width:1px; height:500px; float:right;"></div>
+</div>
+
+<div style=" clear:both;"></div>
+<div id="begin"><span id="asc">上一篇文章：{ZL.Label id="上一篇文章"/}</span> <span id="desc">下一篇文章：{ZL.Label id="下一篇文章"/}</span></div>
+
+</div>
+
+</div><!-- 网站主体左 -->
+{ZL.Label id="网站主体右"/}
+<!-- 网站主体右 -->
+</div>
+<div style=" clear:both;"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

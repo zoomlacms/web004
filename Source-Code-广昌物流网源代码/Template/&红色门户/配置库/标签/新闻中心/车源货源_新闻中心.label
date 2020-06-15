@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>432</LabelID>
+    <LabelName>车源货源_新闻中心</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>新闻中心</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,0,1,显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_yuan on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_yuan.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_C_yuan.chufa,{table1}.dbo.ZL_C_yuan.hclei,{table1}.dbo.ZL_C_yuan.message,{table1}.dbo.ZL_C_yuan.mudi,{table1}.dbo.ZL_C_yuan.time</LabelField>
+    <LabelWhere>{table1}.dbo.ZL_CommonModel.Status=99 and {table1}.dbo.ZL_CommonModel.NodeID=@NodeID</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr class="str1" onMouseOver="this.style.backgroundColor=&amp;quot;#FFFCCC&amp;quot;" onMouseOut="this.style.backgroundColor=&amp;quot;&amp;quot;"&gt;
+&lt;td width="20%" class="str5"&gt;{ZL:CutText({Field="hclei"/},6,)/}&lt;/td&gt;
+&lt;td width="15%"&gt;{ZL:CutText({Field="chufa"/},8,)/}&lt;/td&gt;
+&lt;td width="15%"&gt;{ZL:CutText({Field="mudi"/},8,)/}&lt;/td&gt;
+&lt;td width="30%"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="message"/}" target="_blank"&gt;{ZL:CutText({Field="message"/},12,)/}&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;{ZL:FormatDate({Field="time"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>小于</setroot>
+    <Modelvalue>2</Modelvalue>
+    <Valueroot />
+    <IsOpen>1</IsOpen>
+    <FalseContent>&lt;tr class="str2" onMouseOver="this.style.backgroundColor=&amp;quot;#FFFCCC&amp;quot;" onMouseOut="this.style.backgroundColor=&amp;quot;&amp;quot;"&gt;
+&lt;td width="20%" class="str5"&gt;{ZL:CutText({Field="hclei"/},6,)/}&lt;/td&gt;
+&lt;td width="15%"&gt;{ZL:CutText({Field="chufa"/},8,)/}&lt;/td&gt;
+&lt;td width="15%"&gt;{ZL:CutText({Field="mudi"/},8,)/}&lt;/td&gt;
+&lt;td width="30%"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="message"/}" target="_blank"&gt;{ZL:CutText({Field="message"/},12,)/}&lt;/a&gt;&lt;/td&gt;
+&lt;td width="20%"&gt;{ZL:FormatDate({Field="time"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;/tr&gt;</FalseContent>
+  </Table>
+</NewDataSet>

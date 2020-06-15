@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>460</LabelID>
+    <LabelName>法律咨询调用标签</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_FLZX分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>ZL_Pub_FLZX left join ZL_Pub on ZL_Pub_FLZX.Pubupid=ZL_Pub.Pubid</LabelTable>
+    <LabelField>ZL_Pub_FLZX.*,ZL_Pub.*</LabelField>
+    <LabelWhere>ZL_Pub_FLZX.Pubupid=9 And ZL_Pub_FLZX.Pubstart=1</LabelWhere>
+    <LabelOrder>ZL_Pub_FLZX.ID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="/NodeNews.aspx?NodeID=165&amp;id={Field="ID"/}" target="_blank" class="link"&gt;{Field="PubTitle"/}&lt;/a&gt;&lt;span class="time"&gt;{Field="PubAddTime"/}&lt;/span&gt;&lt;/li&gt;
+{/Repeate}&lt;br /&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

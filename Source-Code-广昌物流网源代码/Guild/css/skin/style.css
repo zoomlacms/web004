@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px;}
+body{font-size:12px;}
+img{border:none}
+a{text-decoration:none;}
+li{list-style-type:none;}
+.clear{clear:both}
+
+#top_bar_txt,#head,#banner,#nav,#main,#bottom{width:980px; margin:auto; clear:both;}/*全局宽度定义*/
+
+#top_bar{ height:38px; width:100%; background:url(images/ms/top_bg.jpg) repeat-x; clear:both;}
+#top_bar_txt span img{ float:left;  margin-top:5px;}
+#top_bar_txt span a{ display:block; float:left; width:100px;height:38px; line-height:38px; margin-left:10px;}
+#top_bar_txt p{display:block; float:right; width:432px; background:url(images/music_bg.jpg) no-repeat; text-align:center;}
+#top_bar_txt p img{margin-top:5px;}
+
+/*仿魔兽风格*/
+#i_body{ background-image:url(images/ms/bg_all.jpg); background-color:#000; background-repeat: repeat-y; background-position: center; }
+#head{ height:250px;background:url(images/ms/head.jpg);}
+
+#nav{ height:38px;background:url(images/ms/nav_bg.jpg);}
+#nav li{float:left; width:90px; height:38px; line-height:38px; text-align:center;}
+#nav li a{ display:block;width:90px; color:#E5D278; font-size:14px; font-weight:bold;}
+#nav li a:hover{ width:90px; height:38px; background:#093;}
+
+#banner{height:90px;}
+
+#main{ margin-top:5px;}
+#main a{color:#FFF;}
+#main_l{ float:left; width:250px;}
+#main_m{float:left; width:480px; margin-left:5px;}
+#main_r{float:right; width:240px;}
+
+.box_top{ width:100%; background:url(images/ms/box_top_bg.jpg) repeat-x; height:11px;background-position:0px 4px;}/*盒项部*/
+.box_top p{display:block; float:left; width:17px; height:11px; background:url(images/ms/box_top_l.jpg) no-repeat; background-position:0px 4px;}
+.box_top span{display:block; float:right; width:18px; height:11px; background:url(images/ms/box_top_r.jpg)  no-repeat;background-position:0px 4px;}
+.box_m_l{ width:100%; height:100%; background:url(images/ms/box_m.jpg) repeat-y; margin-top:0px;}/*左盒中部*/
+.box_m_m{ width:100%; height:100%; background:url(images/ms/box_m_m.jpg) repeat-y;}/*中盒中部*/
+.box_m_r{ width:100%; height:100%; background:url(images/ms/box_m_r.jpg) repeat-y;}/*右盒中部*/
+.box_end{ width:100%; background:url(images/ms/box_end_bg.jpg) repeat-x; height:11px; margin-bottom:0px;}/*盒项部*/
+.box_end p{display:block; float:left; width:17px; height:11px; background:url(images/ms/box_end_l.jpg)  no-repeat;}
+.box_end span{display:block; float:right; width:18px; height:11px; background:url(images/ms/box_end_r.jpg) no-repeat;}
+
+#main_l_k{width:auto; height:230px; clear:both}/*右侧能用块*/
+#main_l_k_t{ margin:auto; width:95%; height:32px; line-height:32px; font-size:16px; font-weight:bold; color:#FFF; text-align:center; background:url(images/ms/login_bg.jpg) repeat-x;}
+#main_l_k_t2{ margin:auto; width:88%; height:50px; line-height:50px; font-size:14px; font-weight:bold; color:#E0CD74;  background:url(images/ms/m_title.jpg) repeat-x; padding-left:40px;}
+#main_l_k_t2 span{float:right; font-size:12px; font-weight:normal; color:#FFF; padding-right:10px;}
+
+.box_m_m ul{margin:5px;}
+.box_m_m li{height:26px; line-height:26px;}
+.box_m_m li a,.box_m_m li span{display:block; float:left; color:#FFF;}
+.box_m_m li a{width:280px;}
+.box_m_m li span{ width:80px; text-align:center;}
+
+#bottom{height:120px; background:url(images/ms/bottom.jpg) repeat-x; color:#FFF;}
+#bottom img{ float:left; margin-left:100px; margin-top:20px;}
+#bottom span{ float:right; margin-top:30px; width:600px; line-height:26px; display:block;}
+
+/*仿魔兽列表页*/
+.title50{ height:50px; line-height:50px; padding-left:40px; font-size:14px; font-weight:bold; margin:auto; color:#E0CD74}
+.title37{ height:37px; line-height:37px; padding-left:40px; font-size:12px; margin:auto; color:#E0CD74}
+#m_list_r{float:left; width:720px; margin-left:10px;}
+.m_list_title{background:url(images/ms/m_list_title.jpg) left no-repeat;}
+.m_site{background:url(images/ms/site.jpg) left no-repeat;  height:37px;}
+
+.m_list1{background:url(images/ms/m_list_bg.jpg); width:100%; height:360px; margin:5px 0 15px;}
+.list_pic{float:left; width:100px; height:100px; text-align:center; margin:15px 10px; display:inline;}
+.list_pic li{ float:left; width:100%; text-align:center; margin-top:5px;}
+.list_pic img{display:block; margin:auto;}
+
+#m_list_r2{float:left; width:720px; margin-left:10px; background:url(images/ms/list_r_bg.jpg) repeat-y; margin-bottom:10px;}
+.list_bottom{background:url(images/ms/list_bottom_bg.jpg) bottom no-repeat; height:62px; line-height:62px;}
+

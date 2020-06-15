@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>435</LabelID>
+    <LabelName>输出广昌物流简介</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>广昌物流</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Article on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Article.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_Article.pic,{table1}.dbo.ZL_C_Article.synopsis</LabelField>
+    <LabelWhere>{table1}.dbo.ZL_CommonModel.NodeID=@NodeID And {table1}.dbo.ZL_CommonModel.EliteLevel=1 And {table1}.dbo.ZL_CommonModel.Status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.OrderID DESC</LabelOrder>
+    <LabelContent>&lt;div id="jies"&gt;
+&lt;div class="gc_pic"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="gc_js"&gt;
+&lt;span&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},30,)/}&lt;/a&gt;&lt;/span&gt;
+&lt;p&gt;{ZL:CutText({Field="synopsis"/},400,...)/}&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="_blank" title="{Field="Title"/}"&gt;查看详细&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

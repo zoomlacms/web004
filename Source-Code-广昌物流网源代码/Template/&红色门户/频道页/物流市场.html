@@ -1,0 +1,261 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/shichang.css" rel="stylesheet" type="text/css" />
+<script src="../../../Skin/gcwuliu/js/gundong.js"></script>
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+SDmodel.sd(["x01","x02","x03","x04"],["y01","y02","y03","y04"],"z01","z02");
+}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+</head>
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+<div id="wusc_main">
+<div id="sc_left">
+<div id="Search">
+<div class="Search_l">
+<script>
+var uid='{ZL:GetuserID()/}';
+function denglv(ModelID,NodeID){
+	if(uid==''){
+		alert("你还没登陆,请先登陆");
+		window.location.href="/user/login.aspx";
+		}
+		else{
+			window.location.href="/User/Content/AddContent2.aspx?ModelID="+ModelID+"&NodeID="+NodeID+"";
+			}
+	}	
+</script>
+    <ul>
+    	<li class="ind01"><a href="javascript:void(0)" onClick="denglv(43,15)" title="发布货源"><span>{ZL.Label id="统计车源货源信息" NodeID="15" /}条信息</span></a></li>
+        <li class="ind02"><a href="javascript:void(0)" onClick="denglv(44,16)" title="发布专线"><span>{ZL.Label id="统计专线信息"/}条信息</a></li>
+        <li class="ind03"><a href="javascript:void(0)" onClick="denglv(46,17)" title="发布投标"><span>{ZL.Label id="统计招聘信息"/}条信息</a></li>
+        <li class="ind04"><a href="javascript:void(0)" onClick="denglv(43,14)" title="发布车源"><span>{ZL.Label id="统计车源货源信息" NodeID="14" /}条信息</span></a></li>
+    </ul>
+</div>
+<div class="Search_r">
+    <div class="sr_l">
+    	<ul>
+        	<li id="x01" class="z01">货源查询</li>
+            <li id="x02" class="z02">车源查询</li>
+            <li id="x03" class="z02">招标查询</li>
+            <li id="x04" class="z02">专线查询</li>
+        </ul>
+    </div>
+    <div class="sr_2" id="y01">
+    <form method="get" action="ColumnList.aspx" target="_self">
+    <input type="hidden" name="NodeID" id="NodeID" value="15">
+    	<span style=" height:35px; line-height:35px; padding-left:8px; color:#F00; font-size:14px;">按起始地和目的地查询货物</span>
+    	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr style=" height:30px;">
+            	<td width="70%" class="str5">出发地：<input type="text" size="17" style=" border:1px solid #FFC28C;" name="chufa" id="chufa" value=""></td>
+                <td width="30%" rowspan="2" style=" padding-left:10px;"><input type="image" src="../../../Skin/gcwuliu/images/shic/chaxun.gif" /></td>
+            </tr>
+            <tr style=" height:30px;">
+            	<td class="str5" >目的地：<input type="text" size="17" style=" border:1px solid #FFC28C;" name="mudi" id="mudi" value=""></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div class="sr_2 hidden" id="y02">
+    <form method="get" action="ColumnList.aspx" target="_self">
+    <input type="hidden" name="NodeID" id="NodeID" value="14">
+    	<span style=" height:35px; line-height:35px; padding-left:8px; color:#F00; font-size:14px;">按起始地和目的地查询车源</span>
+    	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr style=" height:30px;">
+            	<td width="70%" class="str5">出发地：<input type="text" size="17" style=" border:1px solid #FFC28C;" name="chufa" id="chufa" value=""></td>
+                <td width="30%" rowspan="2" style=" padding-left:10px;"><input type="image" src="../../../Skin/gcwuliu/images/shic/chaxun.gif" /></td>
+            </tr>
+            <tr style=" height:30px;">
+            	<td class="str5" >目的地：<input type="text" size="17" style=" border:1px solid #FFC28C;" name="mudi" id="mudi" value=""></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div class="sr_2 hidden" id="y03">
+    <form method="get" action="ColumnList.aspx" target="_self">
+    <input type="hidden" name="NodeID" id="NodeID" value="17">
+    	<span style=" height:35px; line-height:35px; padding-left:8px; color:#F00; font-size:14px;">按岗位和地区查询职位</span>
+    	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr style=" height:30px;">
+            	<td width="70%" class="str5">分类：<input type="text" size="19" name="leis" id="leis" style=" border:1px solid #FFC28C;"></td>
+                <td width="30%" rowspan="2" style=" padding-left:10px;"><input type="image" src="../../../Skin/gcwuliu/images/shic/chaxun.gif" /></td>
+            </tr>
+            <tr style=" height:30px;">
+            	<td class="str5" >地区：<input type="text" size="19" name="addr" id="addr" style=" border:1px solid #FFC28C;"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div class="sr_2 hidden" id="y04">
+    <form method="get" action="ColumnList.aspx" target="_self">
+    <input type="hidden" name="NodeID" id="NodeID" value="16">
+    	<span style=" height:35px; line-height:35px; padding-left:8px; color:#F00; font-size:14px;">按起始地和目的地查询专线</span>
+    	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr style=" height:30px;">
+            	<td width="70%" class="str5">出发地：<input type="text" name="shifa" id="shifa" size="17" value="" style=" border:1px solid #FFC28C;"></td>
+                <td width="30%" rowspan="2" style=" padding-left:10px;"><input type="image" src="../../../Skin/gcwuliu/images/shic/chaxun.gif" /></td>
+            </tr>
+            <tr style=" height:30px;">
+            	<td class="str5" >目的地：<input type="text" size="17" name="mudi" id="mudi" value="" style=" border:1px solid #FFC28C;"></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</div>
+</div>
+<div style=" clear:both; margin:8px auto;"><img src="../../../Skin/gcwuliu/images/shic/ads_center.gif"></div>
+<table width="100%" cellpadding="0" cellspacing="1" border="0" style=" background:#FFC28C;">
+	<tr class="str3"><td><span><a href="{ZL:GetNodeLinkUrl(15)/}" target="_blank">更多>></a></span>货源信息</td><td><span><a href="{ZL:GetNodeLinkUrl(14)/}" target="_blank">更多>></a></span>车源信息</td></tr>
+    <tr class="str4">
+    	<td width="50%">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        	<tr style=" height:25px; background:#FFFCCC;color:#F00;" >
+            	<td width="20%" class="str5">货物类型</td>
+                <td width="15%">出发地</td>
+                <td width="15%">目的地</td>
+                <td width="30%">介绍</td>
+                <td width="20%">发车时间</td>
+            </tr>
+            <tr>
+            <td colspan="5">
+            <div id="idtable" class="idtable">
+            <div id="idtr">
+            	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+                {ZL.Label id="车源货源_新闻中心" NodeID="15" ShowNum="40" /}  
+                </table>
+            </div>
+            </div>    
+            </td>
+            </tr>           
+        </table>
+        </td>
+        <td width="50%">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        	<tr style=" height:25px; background:#FFFCCC;color:#F00;"  >
+            	<td width="20%" class="str5">车次类型</td>
+                <td width="15%">出发地</td>
+                <td width="15%">目的地</td>
+                <td width="30%">介绍</td>
+                <td width="20%">发车时间</td>
+            </tr>
+            <tr>
+            <td colspan="5">
+            <div id="idtable1" class="idtable1">
+            <div id="idtr1">
+            	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+                {ZL.Label id="车源货源_新闻中心" NodeID="14" ShowNum="40" /}  
+                </table>
+            </div>
+            </div>    
+            </td>
+            </tr>  
+        </table>
+        </td>
+    </tr>
+</table>
+<div style=" clear:both; margin:8px auto;"><img src="../../../Skin/gcwuliu/images/shic/ban_mobile.jpg"></div>
+<table width="100%" cellpadding="0" cellspacing="1" border="0" style=" background:#FFC28C;">
+	<tr class="str3"><td><span><a href="{ZL:GetNodeLinkUrl(16)/}">更多>></a></span><p>专线信息</p></td></tr>
+    <tr style=" background:#FFF;">
+    	<td>
+        	<ul class="tdlist">
+            	{ZL.Label id="专线信息_新闻中心" ShowNum="40" /}
+            </ul>
+        </td>
+    </tr>
+</table>
+<div style=" clear:both; margin:8px auto;"><img src="../../../Skin/gcwuliu/images/shic/ban_tv.jpg"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style=" border:1px solid #FFC28C;">
+	<tr class="str3"><td colspan="4"><span><a href="{ZL:GetNodeLinkUrl(17)/}" target="_blank">更多>></a></span>物流招标</td></tr>
+    <tr><td colspan="4"><div style=" clear:both; border-bottom:1px dashed #ccc;"></div></td></tr>
+    <tr class="str2" onMouseOver="this.style.backgroundColor=&quot;#FFFFCC&quot;" onMouseOut="this.style.backgroundColor=&quot;&quot;">
+    	<td width="10%" class="str5">分类</td>
+        <td width="50%" class="str5">标题</td>
+        <td width="20%" class="str5">递交标书时间</td>
+        <td width="20%" class="str5">投标截止时间</td>
+    </tr>
+    {ZL.Label id="最新物流招标" ShowNum="10" /}
+</table>
+</div>
+<div id="sc_right">
+<div class="sr_list2">
+    <div class="sr_list_tit"><span><a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank">更多>></a></span>最新加入企业</div>
+    <ul>
+    	{ZL.Label id="输出最新企业信息缩略图列表" ShowNum="14" /}
+    </ul>
+</div>
+<div style=" clear:both;"></div>
+<div class="sr_list">
+    <div class="sr_list_tit"><span><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">更多>></a></span>多式联运</div>
+    <ul>
+		{ZL.Label id="输出指定节点标题_无时间属性" NodeID="12" TitleNum="30" ShowNum="10" /}
+    </ul>
+</div>
+<div style=" clear:both; margin:8px auto;"><script type="text/javascript" src="{$AdDir/}/201010/5.js"></script></div>
+<div class="sr_list">
+    <div class="sr_list_tit"><span><a href="{ZL:GetNodeLinkUrl(36)/}" target="_blank">更多>></a></span>配货站</div>
+    <ul>
+		{ZL.Label id="输出最新配货站" NodeID="36" TitleNum="30" ShowNum="10" /}
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<SCRIPT> 
+new Scroller("idtable", "idtr",{ Side:["up",""], PauseHeight:25, PauseWidth:190 }); 
+new Scroller("idtable1", "idtr1",{ Side:["up",""], PauseHeight:25, PauseWidth:190 }); 
+</SCRIPT>

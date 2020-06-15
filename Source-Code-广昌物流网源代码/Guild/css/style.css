@@ -1,0 +1,808 @@
+body {
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	background-image:url(http://gh.u9u8.com/u/css/css10/bg.gif);
+	background-position:center;
+	color: #858a51;
+	text-align: center;
+}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0;}
+table,td,tr,th{
+	font-size:12px;
+	line-height: 150%;
+}
+.txl {
+	float: left;
+	height: 160px;
+	width: 163px;
+	text-align: center;
+}
+.banner .url {
+	float: left;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	border: 1px solid #000000;
+	
+	margin-left: 30px;
+	color: #000000;
+	filter: Alpha(Opacity=80);
+}
+a:link {
+	color: #5f6711;
+	text-decoration: none;
+}
+a:visited {
+	color: #5f6711;
+	text-decoration: none;
+}
+a:hover {
+	color: #5f6711;
+	text-decoration: underline;
+}
+
+
+.bg {
+	background-color: #f5f6e9;
+}
+.top {
+	height: 28px;
+	width: auto;
+	background-color: #FFFFFF;
+}
+.banner {
+	height: 280px;
+	width: 960px;
+	background-image:url(http://gh.u9u8.com/u/css/css10/banner.jpg);
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 2px;
+	margin-bottom: 0px;
+		border-top-style:solid;
+	border-top-color:#5e5e5e;
+	border-top-width:1px;
+		border-left-style:solid;
+	border-left-color:#5e5e5e;
+	border-left-width:1px;
+		border-right-style:solid;
+	border-right-color:#5e5e5e;
+	border-right-width:1px;
+}
+.banner .di {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 20px;
+}
+
+.banner .title {
+	margin-top: 10px;
+	margin-left: 20px;
+	
+	border: 1px solid #000000;
+	float: left;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	color: #a5b221;
+	font-size: 14px;
+	font-weight: normal;
+	filter: Alpha(Opacity=80);
+}
+.banner .url {
+	float: left;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	border: 1px solid #000000;
+	
+	margin-left: 30px;
+	color: #a5b221;
+	filter: Alpha(Opacity=80);
+}
+
+.menu {
+	background-image: url(http://gh.u9u8.com/u/css/css10/subnav_bg.gif);
+	width: 960px;
+	height: 30px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+    border:1px solid #5e5e5e;
+}
+.menu .menu1 {
+	height: 23px;
+	width: 740px;
+	float: left;
+	font-size: 14px;
+	color: #5f6711;
+	padding-top: 7px;
+	text-align: left;
+}
+.menu .menu1 a {
+	font-size: 14px;
+	color: #5f6711;
+	text-decoration: none;
+}
+.menu .menu1 a:hover {
+	font-size: 14px;
+	color: #5f6711;
+	text-decoration: underline;
+	font-weight:bold;
+}
+.menu .menu2 {
+	width: 210px;
+	float: right;
+	height: 22px;
+	text-align: right;
+	padding-top: 8px;
+	font-size: 12px;
+	color: #5f6711;
+}
+.clearfix {
+	CLEAR: both; DISPLAY: block; FONT-SIZE: 1px; BACKGROUND: none transparent scroll repeat 0% 0%; VISIBILITY: hidden; LINE-HEIGHT: 0%; HEIGHT: 1%; content: "."
+}
+a.link1:link {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: none;
+}
+a.link1:visited {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: none;
+}
+a.link1:hover {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: underline;
+}
+.title {
+	font-size: 16px;
+	font-weight: bold;
+	color: #CCCCCC;
+}
+.i_title14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #5f6711;
+}
+a.i_admin:link {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.i_admin:visited {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+	font-weight: normal;
+}
+a.i_admin:hover {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+	font-weight: normal;
+}
+#mainbody {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#welcome {
+	line-height: 150%;
+	text-align: left;
+	padding: 10px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#mainbodybbs {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#mainbodybbs h5 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+border:1px solid #5e5e5e;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5f6711;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: left;
+}
+#rmbg
+{background-color: #f5f6e9;}
+#mainbodybbs ul {
+	background-color: #f5f6e9;
+	padding: 5px;
+	margin-bottom: 10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-bottom-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+}
+#mainbody #left {
+	float: left;
+	width: 240px;
+}
+#mainbody #center {
+	width: 460px;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+}
+#mainbody #center1 {
+	width: 710px;
+	margin-left: 10px;
+	float: left;
+}
+#mainbody #left h5 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+border:1px solid #5e5e5e;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5f6711;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: left;
+}
+#mainbody #left ul {
+	background-color: #f5f6e9;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-bottom-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+	width: 218px;
+}
+#mainbody #center h5 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+border:1px solid #5e5e5e;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5f6711;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: left;
+}
+#mainbody #center ul {
+	background-color: #f5f6e9;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-bottom-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+	width: 438px;
+}
+#mainbody #center h6 {
+	background-color: #f5f6e9;
+	margin-bottom: 10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-bottom-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+	width: 458px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+#mainbody #center1 h5 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+	border-top-style:solid;
+	border-top-color:#5e5e5e;
+	border-top-width:1px;
+	border-left-style:solid;
+	border-left-color:#5e5e5e;
+	border-left-width:1px;
+	border-right-style:solid;
+	border-right-color:#5e5e5e;
+	border-right-width:1px;
+	height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #5f6711;
+	padding-left: 10px;
+	padding-top: 5px;
+	text-align: left;
+}
+#mainbody #center1 ul {
+	background-color: #f5f6e9;
+	padding: 10px;
+	margin-bottom: 10px;
+border:1px solid #5e5e5e;
+	width: 688px;
+}
+#mainbody #center #wel {
+	margin-bottom: 10px;
+	text-align: left;
+	line-height: 130%;
+}
+#mainbody #center .photo_list {
+	float: left;
+	height: 170px;
+	width: 145px;
+	line-height: 130%;
+	margin-bottom: 10px;
+}
+#mainbody #center .photo_list .photo {
+	height: 125px;
+	width: 125px;
+	padding: 2px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 3px;
+}
+#mainbody #center1 .photo_list {
+	float: left;
+	height: 170px;
+	width: 170px;
+	margin-right: 0px;
+	margin-left: 0px;
+	line-height: 130%;
+	margin-bottom: 10px;
+}
+#mainbody #center1 .photo_list .photo {
+	height: 125px;
+	width: 125px;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 3px;
+}
+#foot {
+	height: 50px;
+	width: 980px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #a5b221;
+	line-height: 200%;
+	color: #959595;
+	text-align: center;
+	padding-top: 5px;
+}
+.join {
+	background-image: url(http://gh.u9u8.com/u/css/css10/join.gif);
+	height: 20px;
+	width: 80px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	cursor: hand
+}
+.qd {
+	background-image: url(http://gh.u9u8.com/u/css/css10/qd.gif);
+	height: 20px;
+	width: 80px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	cursor: hand
+}
+#mainbody #center #wel {
+	margin-bottom: 10px;
+	text-align: left;
+	line-height: 130%;
+}
+.font_14_b {
+	font-size: 14px;
+}
+.font_14_b td {
+	font-size: 14px;
+}
+.font_14_b a {
+	font-size: 14px;
+	color: #5f6711;
+	text-decoration: none;
+}
+.font_14_b a:hover {
+	font-size: 14px;
+	color: #5f6711;
+	text-decoration: underline;
+}
+.hei {
+	color: #000000;
+}
+.line {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #666666;
+}
+.user_img {
+	float: left;
+	height: 70px;
+	width: 72px;
+	list-style-type: none;
+	text-align: center;
+	line-height: 150%;
+}
+.user_img img {
+	border: 1px solid #C0C0C0;
+}
+.user_img a {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: none;
+}
+.user_img a:hover {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: underline;
+}
+.user_img1 {
+	float: left;
+	height: 110px;
+	width: 228px;
+	list-style-type: none;
+	text-align: left;
+	line-height: 180%;
+}
+.user_img1 img {
+	border: 1px solid #C0C0C0;
+}
+.user_img1 a {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: none;
+}
+.user_img1 a:hover {
+	font-size: 12px;
+	color: #5f6711;
+	text-decoration: underline;
+}
+.page {
+	margin-right: auto;
+	margin-left: auto;
+	width: 650px;
+}
+.page a {
+	font-size: 12px;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.page a:hover {
+	font-size: 12px;
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+.bbs_lab {
+	color: #FF0000;
+}
+.bbs_tit {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #5e5e5e;
+	border-right-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+}
+.bbs_bk {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-bottom-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+}
+.bbs_b {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #5e5e5e;
+}
+.bbs_bz {
+	background-color: #f5f6e9;
+}
+.bbs_bz1 {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #5e5e5e;
+	border-left-color: #5e5e5e;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #5e5e5e;
+}
+.bbs_qu {
+	background-color: #5e5e5e;
+	margin-bottom: 10px;
+}
+.bbs_qu1 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/mubg.gif);
+	color:#5f6711;
+}
+.bbs_qu2 {
+	background-color: #f5f6e9;
+}
+.bbs_bk_line {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #5e5e5e;
+}
+.bbs_bk_img {
+	margin-right: 10px;
+}
+.bbs_bk_sm {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #5e5e5e;
+	line-height: 140%;
+}
+.bbs_zhhf {
+	line-height: 140%;
+	padding-top: 2px;
+}
+.bbs_tz1 {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #5e5e5e;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #5e5e5e;
+}
+.bbs_tz2 {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #5e5e5e;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #5e5e5e;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #5e5e5e;
+}
+.bbs_top_height {
+	line-height: 140%;
+}
+
+#bbs_z {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/forum_zlt.gif);
+	height: 32px;
+	width: 32px;
+}
+#bbs_n {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/forum_nonews.gif);
+	height: 23px;
+	width: 25px;
+}
+#bbs_w {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/forum_isnews.gif);
+	height: 23px;
+	width: 25px;
+}
+#bbs_jt {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Forum_readme.gif);
+	height: 9px;
+	width: 9px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#bbs_zts {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/forum_topic.gif);
+	height: 10px;
+	width: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#bbs_hfs {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Forum_post.gif);
+	height: 10px;
+	width: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#bbs_i1 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Forum_nav.gif);
+	height: 9px;
+	width: 9px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#bbs_zt {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/postnew.gif);
+	height: 26px;
+	width: 88px;
+	cursor: hand;
+}
+#bbs_tp {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/votenew.gif);
+	height: 26px;
+	width: 88px;
+	cursor: hand;
+}
+#bbs_hf {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/mreply.gif);
+	height: 26px;
+	width: 88px;
+	cursor: hand;
+}
+#bbs_i2 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/team.gif);
+	height: 20px;
+	width: 20px;
+}
+#bbs_vote {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/votepic.gif);
+	height: 16px;
+	width: 17px;
+}
+#bbs_zzd {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/ztop.gif);
+	height: 16px;
+	width: 16px;
+}
+#bbs_zd {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/istop.gif);
+	height: 16px;
+	width: 16px;
+}
+#bbs_jh {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/isbest.gif);
+	height: 27px;
+	width: 28px;
+}
+#bbs_sd {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/lockfolder.gif);
+	height: 27px;
+	width: 28px;
+}
+#bbs_hot {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/hotfolder.gif);
+	height: 27px;
+	width: 28px;
+}
+#bbs_whot {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/folder.gif);
+	height: 27px;
+	width: 28px;
+}
+#bbs_page1 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/First.gif);
+	height: 8px;
+	width: 9px;
+	background-position: center;
+	cursor: hand;
+	background-repeat: no-repeat;
+	margin: 2px;
+}
+#bbs_page2 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Previous.gif);
+	height: 8px;
+	width: 9px;
+	background-position: center;
+	cursor: hand;
+	background-repeat: no-repeat;
+	margin: 2px;
+}
+#bbs_page3 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Next.gif);
+	height: 8px;
+	width: 9px;
+	background-position: center;
+	cursor: hand;
+	background-repeat: no-repeat;
+	margin: 2px;
+}
+#bbs_page4 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/Last.gif);
+	height: 8px;
+	width: 9px;
+	background-position: center;
+	cursor: hand;
+	background-repeat: no-repeat;
+	margin: 2px;
+}
+#bbs_del_hf {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/del.gif);
+	height: 18px;
+	width: 48px;
+	background-position: center;
+	cursor: hand;
+	background-repeat: no-repeat;
+	margin: 2px;
+}
+#online1 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/online_admin1.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+#online2 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/online_supermod2.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+#online3 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/online_moderator3.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+#online4 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/online_member4.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+#online5 {
+	background-image: url(http://gh.u9u8.com/u/css/css10/bbs/online_adjmin5.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	margin-left: 3px;
+}

@@ -1,0 +1,187 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/style.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+</head>
+
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+
+<div id="mainbody">
+<div class="l_list_newsindex" >
+<div class="content">
+<div class="listtextbox">
+<div class="autophoto">
+<div id="FocusViewer" isimage="true" textheight="24"></div>
+<script src="/js/bairongflash.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+var FocusViewer_focus_width=230
+var FocusViewer_focus_height=186
+var FocusViewer_text_height=0
+
+var FocusViewer_swf_height = FocusViewer_focus_height + FocusViewer_text_height
+
+var FocusViewer_pics='{ZL.Label id="兼容FF六图轮循_输出广告图片" NodeID="1" /}'
+var FocusViewer_links='{ZL.Label id="兼容FF六图轮循_输出广告链接" NodeID="1" /}'
+var FocusViewer_texts='{ZL.Label id="兼容FF六图轮循_输出广告标题" NodeID="1" /}'
+
+//alert(FocusViewer_texts);
+
+var FocusViewer_FocusFlash = new bairongFlash("/skin/default/focusviewer.swf", "focusflash", FocusViewer_focus_width, FocusViewer_swf_height, "7", "#ffffff", false, "High");
+FocusViewer_FocusFlash.addParam("allowScriptAccess", "sameDomain");
+FocusViewer_FocusFlash.addParam("menu", "false");
+FocusViewer_FocusFlash.addParam("wmode", "opaque");
+FocusViewer_FocusFlash.addVariable("pics", FocusViewer_pics);
+FocusViewer_FocusFlash.addVariable("links", FocusViewer_links);
+FocusViewer_FocusFlash.addVariable("texts", FocusViewer_texts);
+FocusViewer_FocusFlash.addVariable("borderwidth", FocusViewer_focus_width);
+FocusViewer_FocusFlash.addVariable("borderheight", FocusViewer_focus_height);
+FocusViewer_FocusFlash.addVariable("textheight", FocusViewer_text_height);
+FocusViewer_FocusFlash.write("FocusViewer");
+</script>
+
+</div>
+<div class="newshotbox">
+{ZL.Label id="首页头条2" NodeID="37" /}
+</div>
+</div>
+<div class="listtextbox">
+<div class="listtext">
+<div class="news_box">
+<div class="news_box_title">热点新闻</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">更多</a></div>
+</div>				  
+{ZL.Label id="输出最新新闻" NodeID="4" ShowNum="10" TitleNum="40" /}
+</div>
+<div class="listtext2">
+<div class="news_box">
+<div class="news_box_title">行业资讯</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">更多</a></div>
+</div>
+{ZL.Label id="输出最新新闻" NodeID="5" ShowNum="10" TitleNum="40" /}
+</div>
+</div>
+<div class="listtextbox">
+<div class="listtext">
+<div class="news_box">
+<div class="news_box_title">会员动态</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(6)/}" target="_blank">更多</a></div>
+</div>				  
+{ZL.Label id="输出最新新闻" NodeID="6" ShowNum="10" TitleNum="40" /}
+</div>
+<div class="listtext2">
+<div class="news_box">
+<div class="news_box_title">法律法规</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(7)/}" target="_blank">更多</a></div>
+</div>	
+{ZL.Label id="输出最新新闻" NodeID="7" ShowNum="10" TitleNum="40" /}
+</div>
+</div>
+<div class="listtextbox">
+<div class="listtext">
+<div class="news_box">
+<div class="news_box_title">政策公告</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(9)/}" target="_blank">更多</a></div>
+</div>				  
+{ZL.Label id="输出最新新闻" NodeID="9" ShowNum="10" TitleNum="40" /}
+</div>
+<div class="listtext2">
+<div class="news_box">
+<div class="news_box_title">展会信息</div>
+<div class="news_box_more"><a href="{ZL:GetNodeLinkUrl(11)/}" target="_blank">更多</a></div>
+</div>
+{ZL.Label id="输出最新新闻" NodeID="11" ShowNum="11" TitleNum="40" /}
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="l_list_newsindex_r_list">
+
+<div class="box" >			
+<div class="box_title">
+<ul>
+<li class="title"><img src="../../../Skin/gcwuliu/images/news_10.jpg" width="11" height="11" alt="">&nbsp;推荐文章</li>
+</ul>
+</div>
+<ul class="list3">
+{ZL.Label id="推荐新闻" NodeID="1" ShowNum="10" /}
+</ul>
+<div class="box_title2">
+<ul>
+<li class="title">&nbsp;新闻排行</li>
+</ul>
+</div>
+<ul class="listTop">
+{ZL.Label id="新闻排行" NodeID="1" ShowNum="10" /}
+</ul>
+<div class="box_title2">
+<ul>
+<li class="title">&nbsp;广告推荐</li>
+</ul>
+</div>
+<ul class="list3" style=" padding-bottom:10px;">
+<script type="text/javascript" src="{$AdDir/}/201010/4.js"></script>
+</ul>							
+
+</div>
+
+</div>	
+</div>
+<div class="clear"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

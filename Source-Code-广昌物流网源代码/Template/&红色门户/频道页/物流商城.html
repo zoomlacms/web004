@@ -1,0 +1,265 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/shop.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../../../skin/gcwuliu/js/show1.js"></script>
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+	#list li{ position:relative;cursor:pointer; width:210px; height:27px; line-height:27px; display:block; z-index:2; }
+	#list .lihover{ background:#FFFAF1; height:22px; line-height:22px; border:2px solid #8C0B01; border-right-width:0px; }
+	#list li div{position:absolute; z-index:1010; left:180px; top:-2px ; width:400px; display:none; background:#FFFAF1; border:2px solid #8C0B01; }
+	#list .span1{ display:block; position:absolute; z-index:999999; left:-2px; top:0px;  width:2px;  background:#FFFAF1;  !important; height:22px;}
+</style>
+</head>
+
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+
+<div class="clear" style="margin-top:8px;"></div>
+<div id="elit">
+<div id="elit_L">
+<div class="kstd" id="list">
+<div id="elit_L_tit"><b><a href="{ZL:GetNodeListUrl(2)/}" target="_blank">所有商品分类</a></b></div>
+<ul id="maindl"> 	
+<li><span class="c1">潮流服饰</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="48" /}
+</div>
+</li>	
+<li ><span class="c2">精品鞋包</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="49" /}        
+</div>
+</li>	
+<li ><span class="c3">美容护肤</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="50" /} 
+</div>
+</li>
+<li ><span class="c4">珠宝饰品</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+  {ZL.Label id="循环输出商品导航" ParentID="51" /}         
+</div>
+</li>
+<li ><span class="c5">运动户外</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+ {ZL.Label id="循环输出商品导航" ParentID="52" /}     
+</div>
+</li>
+<li ><span class="c6">手机数码</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+ {ZL.Label id="循环输出商品导航" ParentID="53" /}  
+</div>
+</li>
+<li ><span class="c7">居家生活</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="54" /}       
+</div>
+</li>
+<li ><span class="c8">家电家装</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="55" /}       
+</div>
+</li>
+<li ><span class="c9">母婴用品</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="56" /}
+</div>
+</li>
+<li ><span class="c10">食品保健</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="57" /}
+</div>
+</li>
+<li ><span class="c11">图书音像</span>
+<div class="main_left_con_l">
+<span class="span1"></span>
+{ZL.Label id="循环输出商品导航" ParentID="58" /}      
+</div>
+</li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+function menu(){//声明函数
+ var sfEls = document.getElementById("list").getElementsByTagName("li");
+
+for (var i=0; i<sfEls.length; i++) {
+  sfEls[i].onmouseover=function(){//当outer鼠标移入时候执行：
+  this.getElementsByTagName("div")[0].style.display="block";//this指outer本身；它下面的ul的样式display=block，也就是显示；
+  this.className='lihover';
+ }
+ sfEls[i].onmouseout=function(){//当outer鼠标移出时候执行：
+  this.getElementsByTagName("div")[0].style.display="none";//this指outer本身；它下面的ul的样式display=none，也就是隐藏；
+  this.className='';
+ }
+}
+}
+menu();//执行函数
+</script> 
+<script>
+var dlEm=document.getElementById("maindl").getElementsByTagName("dl");
+
+for(var i=0; i<=dlEm.length; i++){
+	if(dlEm[i]){
+	dlEm[i].onmouseover=function() {		
+		this.className='dlhover';
+	  }
+	dlEm[i].onmouseout=function() {
+	this.className='';
+	  }}
+	}
+</script>
+
+<div id="elit_R">
+<div class="container" id="idTransformView">
+  <ul class="slider" id="idSlider">
+    <li><img src="../../Skin/gcwuliu/images/01.jpg"/></li>
+    <li><img src="../../Skin/gcwuliu/images/03.jpg"/></li>
+    <li><img src="../../Skin/gcwuliu/images/04.jpg"/></li>
+    <li><img src="../../Skin/gcwuliu/images/05.jpg"/></li>
+  </ul>
+  <ul class="num" id="idNum">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</div>
+<!-- 滚动图片特效广告位 -->
+</div>
+</div>
+<div style=" clear:both; height:10px;"></div>
+<div id="main">
+<div class="clear"></div>
+<div class="bestelit">
+<div class="lined">
+<div class="linedtit"><img src="../../../Skin/gcwuliu/images/01pic.jpg"></div>
+<ul>
+  <li><a href="{ZL:GetNodeLinkUrl(61)/}" target="_blank">卫衣</a></li>
+  <li><a href="{ZL:GetNodeLinkUrl(62)/}" target="_blank">风衣</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(63)/}" target="_blank">短外套</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(64)/}" target="_blank">棉衣</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(65)/}" target="_blank">毛衣</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(66)/}" target="_blank">皮衣</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(67)/}" target="_blank">连衣裙</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(71)/}" target="_blank">薄夹克</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(69)/}" target="_blank">衬衫</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(78)/}" target="_blank">高跟鞋</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(80)/}" target="_blank">短靴</a>|</li>
+</ul>
+</div>
+<div class="bestelit_txt" >
+<ul id="lastlia">
+{ZL.Label id="精品推荐区_商城" NodeID="47" ShowNum="10" TitleNumber="60" /}
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<div class="bestelit">
+<div class="lined">
+<div class="linedtit"><img src="../../../Skin/gcwuliu/images/02pic.jpg"></div>
+<ul>    
+  <li><a href="{ZL:GetNodeLinkUrl(86)/}" target="_blank">收拎包 </a></li>
+  <li><a href="{ZL:GetNodeLinkUrl(87)/}" target="_blank">单肩包</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(92)/}" target="_blank">洁面乳</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(94)/}" target="_blank">乳液/面霜</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(96)/}" target="_blank">粉底液</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(101)/}" target="_blank">结婚戒指</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(103)/}" target="_blank">蜜月首饰</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(104)/}" target="_blank">结婚对戒</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(106)/}" target="_blank">耳环</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(107)/}" target="_blank">手链</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(105)/}" target="_blank">项链</a>|</li>
+</ul>
+</div>
+<div class="bestelit_txt">
+<ul id="lastlib">
+{ZL.Label id="热卖区_商城" NodeID="47" ShowNum="5" TitleNumber="60" /}
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<div class="bestelit">
+<div class="lined">
+<div class="linedtit"><img src="../../../Skin/gcwuliu/images/03pic.jpg"></div>
+<ul>    
+  <li><a href="{ZL:GetNodeLinkUrl(110)/}" target="_blank">足球</a></li>
+  <li><a href="{ZL:GetNodeLinkUrl(111)/}" target="_blank">篮球</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(112)/}" target="_blank">踏步机</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(113)/}" target="_blank">跑步机</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(118)/}" target="_blank">显示器</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(124)/}" target="_blank">日用品</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(131)/}" target="_blank">家庭影院</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(133)/}" target="_blank">装饰灯具</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(142)/}" target="_blank">孕妇装</a>|</li>
+  <li><a href="{ZL:GetNodeLinkUrl(138)/}" target="_blank">奶粉</a>|</li>
+</ul>
+</div>
+<div class="bestelit_txt">
+<ul id="lastlic" >
+{ZL.Label id="新品上市_商城" NodeID="47" ShowNum="10" TitleNumber="60" /}
+</ul>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

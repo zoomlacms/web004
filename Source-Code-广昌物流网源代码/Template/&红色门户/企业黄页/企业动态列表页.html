@@ -1,0 +1,83 @@
+{ZL.Source id="企业会员数据源" uid="{$GetRequest(uid)$}" /}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>企业动态 - {$SiteName/}</title>
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+<body>
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+	
+<!-- 网站主体 -->
+<div id="main">
+		<!--黄页主左部-->
+<div id="hyleft">
+	<span class="title"><a href="{ZL:GetLastinfo(24)/}&uid={$GetRequest(uid)$}">企业首页</a></span>
+	<span class="face"><img src="{$UploadDir/}{SField sid="企业会员数据源" FD="name" page="0"/}" ></span>
+		<p>{SField sid="企业会员数据源" FD="name" page="0"/}</p>
+		<span class="title"><a href="{ZL:GetNodeLinkUrl(26)/}&uid={$GetRequest(uid)$}">公司信息</a></span>	
+		<ul>
+			<li><a href="{ZL:GetNodeLinkUrl(25)/}&uid={$GetRequest(uid)$}">企业简介</a></li>
+			<li><a href="{ZL:GetNodeLinkUrl(26)/}&uid={$GetRequest(uid)$}">企业动态</a></li>
+			<li><a href="{ZL:GetNodeLinkUrl(27)/}&uid={$GetRequest(uid)$}">车源信息</a></li>
+			<li><a href="{ZL:GetNodeLinkUrl(29)/}&uid={$GetRequest(uid)$}">货源信息</a></li>
+			<li><a href="{ZL:GetNodeLinkUrl(30)/}&uid={$GetRequest(uid)$}">专线信息</a></li>
+		</ul>
+		<span class="title"><a href="{ZL:GetNodeLinkUrl(31)/}&uid={$GetRequest(uid)$}">客户留言</a></span>
+	</div>
+	<div id="hyright">
+		<div class="title">企业动态</div>
+		
+			{ZL.Label id="黄页企业动态" uname="{SField sid="企业会员数据源" FD="UserName" page="0"/}" /}
+		
+	</div>
+<div style=" clear:both;"></div>
+</div>
+
+ <!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

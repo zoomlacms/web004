@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* 全局样式定义 Powered by zoomla.cn */
+
+#wusc_main{ width:980px; margin:auto; clear:both;}
+
+#Search{ margin-bottom:4px; clear:both; overflow:hidden; height:100%;}
+#sc_left{ width:740px; float:left;}
+#sc_right{ width:230px; float:right;}
+
+/*左边*/
+.Search_l{ width:372px; float:left;}
+.Search_r{ width:368px; float:right;}
+.sr_l{ width:80px; float:left; text-align:center;}
+.sr_2{ float:right; border:1px solid #FFC28C; width:278px; height:100px;}
+.sr_l li{  line-height:22px; text-align:center;color:#FF6600; margin-bottom:2px;}
+/*滑动门*/
+.z01{ cursor:pointer; font-weight:bold;display:block; width:80px; height:22px;  border:1px solid #FE9D00; }
+.z02{ cursor:pointer; display:block; width:80px; height:22px;  border:1px solid #ccc;}
+
+.Search_l li{ width:186px;  float:left;}
+.Search_l li a{ display:block; width:186px; height:48px;  }
+
+.Search_l li a span{ display:block; padding-top:28px; padding-left:50px; }
+.ind01{ background:url(images/shic/ind_01.gif) no-repeat; height:54px; }
+.ind01 a:hover{  background:url(images/shic/ind_01.gif) 0px -54px no-repeat; text-decoration:none; color:#000;}
+.ind02{ background:url(images/shic/ind_02.gif) no-repeat; height:54px;}
+.ind02 a:hover{  background:url(images/shic/ind_02.gif) 0px -54px no-repeat; text-decoration:none; color:#000;}
+.ind03{ background:url(images/shic/ind_03.gif) no-repeat; height:48px;}
+.ind03 a:hover{  background:url(images/shic/ind_03.gif) 0px -48px no-repeat; text-decoration:none; color:#000;}
+.ind04{ background:url(images/shic/ind_04.gif) no-repeat; height:48px;}
+.ind04 a:hover{  background:url(images/shic/ind_04.gif) 0px -48px no-repeat; text-decoration:none; color:#000;}
+
+.str1{height:25px;  background:#FEF;}
+.str2{height:25px; background:#FFF;}
+.str3{background:#FFF8EC; height:25px; color:#FF6600; font-weight:bold; padding-left:10px;} 
+.str3 td{ padding-left:8px;}
+.str3 span{ float:right; padding-right:10px; font-weight:normal;}
+.str3 p{ float:left;}
+.str4{height:25px; background:#FFF;}
+.str5{ padding-left:8px;}
+
+/*右边*/
+.sr_list,.sr_list2{ margin-bottom:10px;}
+
+.sr_list,.sr_list2 ul{ border:1px solid #ccc; border-top-width:0px; overflow:hidden; height:100%;}
+.sr_list2 ul{ padding-top:12px;}
+.sr_list li{ height:23px; line-height:23px; padding-left:15px; background:url(images/list_3.gif) 7px 8px no-repeat;}
+.sr_list2 li{ float:left; width:100px; height:50px; line-height:50px; padding-left:8px;}
+.sr_list2 li img{ width:100px; height:35px; border:1px solid #ccc;}
+.sr_list_tit{ background:url(images/shic/title_r_bg.gif) no-repeat; height:29px; line-height:29px; font-weight:bold; color:#FFF; padding-left:10px;}
+.sr_list_tit span{ float:right; padding-right:10px; font-weight:normal;}
+.sr_list_tit span a{ color:#fff;}
+
+.tdlist{ padding-bottom:2px; overflow:hidden; height:100%; }
+.tdlist li{ display:block; width:180px; height:30px; border:1px solid #FFC28C; margin-left:2px !important; margin-left:1px; margin-top:2px; line-height:30px; text-align:center; float:left; background:url(images/shic/go.gif) 82px 8px no-repeat;}
+.tdlist li a:hover{ display:block; width:180px; height:30px; background:url(images/shic/go.gif) #FFFFCC 82px 8px no-repeat; color:#F00; text-decoration:none;}
+
+.tdlist1{ padding-bottom:2px; overflow:hidden; height:100%; }
+.tdlist1 li{ display:block; width:176px; height:30px; border:1px solid #FFC28C; margin-left:3px !important; margin-left:2px; margin-top:2px; line-height:30px; text-align:center; float:left; background:url(images/shic/go.gif) 82px 8px no-repeat;}
+.tdlist1 li a:hover{ display:block; width:176px; height:30px; background:url(images/shic/go.gif) #FFFFCC 82px 8px no-repeat; color:#F00; text-decoration:none;}
+
+
+.idtable,.idtable1{ height:250px;}

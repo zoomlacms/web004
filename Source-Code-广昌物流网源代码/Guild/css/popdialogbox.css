@@ -1,0 +1,47 @@
+popcss_img{
+	border: 0;
+}
+
+div.pop_shadowbox {
+	background: #8f8f8f;
+	position: absolute;
+	display:none;
+	top:200px;
+	left: 300px;		
+	z-index:2001;
+	width:300px;	
+}
+div.pop_dlgbox{
+	position:relative;
+	padding-bottom:15px;
+	border:1px #777 solid;
+	background-color:#fff;
+	top:-6px;
+	left: -4px;
+	text-align:left;
+}
+div.pop_dlgbox .right {
+	top:-4px; 
+	left:-4px;
+}
+div.pop_dlgbox .left {
+	top:-4px; 
+	right:-4px;
+}
+div.pop_dlgbox .poptitle{
+	background-image:url(../../images/dialogbox_titlebackground.gif);
+	cursor:move;
+	height: 5px;
+	padding-top: 11px;
+	padding-right: 0;
+	padding-bottom: 13px;
+	padding-left: 7px;
+}
+div.pop_dlgbox .close{
+	position:absolute;
+	top:9px;
+	right:10px;
+}
+
+.gray_background{background-color:#000;width:100%;height:100%;position:absolute;top:0;left:0;z-index:2000;display:none;filter:alpha(opacity=50);-moz-opacity:0.5;}
+

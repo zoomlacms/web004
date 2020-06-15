@@ -1,0 +1,148 @@
+﻿{ZL.Source id="常规商品数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{SField sid="常规商品数据源" FD="Proname" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="常规商品数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="常规商品数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/shop.css" rel="stylesheet" type="text/css" />
+<style>
+#list li{ position:relative;cursor:pointer; width:210px; height:27px; line-height:27px; display:block; z-index:2; }
+#list .lihover{ background:#FFFAF1; height:22px; line-height:22px; border:2px solid #8C0B01; border-right-width:0px; }
+#list li div{position:absolute; z-index:1010; left:180px; top:-2px ; width:400px; display:none; background:#FFFAF1; border:2px solid #8C0B01; }
+#list .span1{ display:block; position:absolute; z-index:999999; left:-2px; top:0px;  width:2px;  background:#FFFAF1;  !important; height:22px;}
+</style>
+
+</head>
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+<div class="clear" style="margin-top:12px;"></div>
+
+<div id="main">
+<div id="WebAd001">
+<p>您的位置：<a href="{ZL:GetNodeLinkUrl(47)/}">物流商城</a> >> <a href="{ZL:GetNodeLinkUrl({SField sid="常规商品数据源" FD="Nodeid" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" /}</a> >> {SField sid="常规商品数据源" FD="Proname" page="0"/}</p>
+</div>
+<div class="clear"></div>
+{ZL.Label id="商城列表右部"/}
+<div id="neirong_R">
+<div id="ShopCon">
+<div id="shop_tit"><h3>{SField sid="常规商品数据源" FD="Proname" page="0"/}</h3></div>
+<div id="shopcon_L">
+<img src="{SField sid="常规商品数据源" FD="Thumbnails" page="0"/}" />
+<div class="sc">
+<script>
+function denglv(){
+	var uid="{ZL:GetuserID()/}";
+	if(uid=="")
+	{
+		alert("你还没有登陆，不能收藏！");
+		window.location.href=window.location.href;
+		}
+		else{ 
+		window.location.href='/User/Content/AddToFav.aspx?itemid={SField sid="常规商品数据源" FD="ID" page="0"/}&Url=/Shop.aspx?ItemID={SField sid="常规商品数据源" FD="ID" page="0"/}&type=2';
+		}
+	}	
+</script>
+<a href="javascript:void(0)" onClick="denglv()">收藏该商品</a>
+</div>
+</div>
+<div id="shopcon_R">
+ <form id="form" name="form" method="post" action="/UserCart.aspx" runat="server">
+ 价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：<b>￥{ZL:GetMoney({SField sid="常规商品数据源" FD="LinPrice" page="0"/},2,1)/}</b><span>(已有{ZL.Label id="商品评论数统计" ItemID="{SField sid="常规商品数据源" FD="ID" page="0"/}"/}人评论)</span><br/> 
+	赠送积分：<font style="color:#F60; font-size:14px; font-weight:bold;">{SField sid="常规商品数据源" FD="Integral" page="0"/}</font><br>
+ 促　　销：{SField sid="常规商品数据源" FD="is_chu" page="0"/}<br>
+ 浏 览  量：{SField sid="常规商品数据源" FD="AllClickNum" page="0"/}<br>
+商品总数：{SField sid="常规商品数据源" FD="Stock" page="0"/}件 <br>
+
+数&nbsp;&nbsp;&nbsp;&nbsp;量：<input type="hidden" id="id" name="id" value="{SField sid="常规商品数据源" FD="ID" page="0"/}" />  
+<input type="text" size="10" name="Pronum" id="Pronum"  value="1"/>
+{SField sid="常规商品数据源" FD="ProUnit" page="0"/}
+<br>
+<br>
+ <INPUT src="/Skin/gcwuliu/images/btn.jpg" type="image" /></p>
+</form>
+</div>
+
+<div class="clear"></div>
+<script type="text/javascript">
+function nTabs(thisObj,Num){
+if(thisObj.className == "active")return;
+var tabObj = thisObj.parentNode.id;
+var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+for(i=0; i <tabList.length; i++)
+{
+if (i == Num)
+{
+thisObj.className = "active"; 
+document.getElementById(tabObj+"_Content"+i).style.display = "block";
+}else{
+tabList[i].className = "normal"; 
+document.getElementById(tabObj+"_Content"+i).style.display = "none";
+}
+} 
+}
+</script>
+<div class="nTab" >
+<!-- 标题开始 -->
+<div class="TabTitle">
+<ul id="myTab1">
+<li class="active" onclick="nTabs(this,0);">商品详情</li>
+<li class="normal" onclick="nTabs(this,1);">评价详情</li>
+<li class="normal" onclick="nTabs(this,2);">推荐商品</li>
+<li class="normal" onclick="nTabs(this,3);">商品评论</li>
+</ul>
+</div>
+<!-- 内容开始 -->
+<div class="TabContent">
+<div id="myTab1_Content0" > {SField sid="常规商品数据源" FD="Procontent" page="0"/} </div>
+<div id="myTab1_Content1" class="none">
+<div id="pl_tit">
+<div id="pl_tit_L">评论</div>
+<div id="pl_tit_R">评价人</div>
+</div>
+<div class="clear"></div>
+{ZL.Label id="商品评论调用标签"/}
+</div>
+<div id="myTab1_Content2" class="none" >
+<ul>
+{ZL.Label id="商品推荐区_商城" NodeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" ShowNum="5" TitleNumber="60" /}
+</ul>
+</div>
+<div id="myTab1_Content3" class="none">
+<form name="form8" method="post" action="/PubAction.aspx">
+  <table width="100%" height="80" border="0" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+    <tr>
+      <td width="151" height="27" bgcolor="#FFFFFF" align="right">评论标题：</td>
+      <td bgcolor="#FFFFFF"><input name="PubTitle" type="text" id="PubTitle" size="50">
+      <input type="hidden" name="PubID" id="PubID" value="8">
+      <input type="hidden" name="PubContentid" id="PubContentid" value="{$GetRequest(ItemID)$}"></td>
+    </tr>
+    <tr>
+      <td bgcolor="#FFFFFF" align="right">评论内容：</td>
+      <td bgcolor="#FFFFFF"><textarea name="PubContent" cols="50" rows="10" id="PubContent"></textarea></td>
+    </tr>
+     <tr>
+      <td colspan="2" align="center" bgcolor="#FFFFFF">
+       <input type="submit" value=""  style="background:url(../../../Skin/gcwuliu/images/xisn1.jpg) no-repeat center; border:none; cursor:pointer; width:60px; height:21px;"><input type="reset" name="button" id="button" value="重置"></td>
+    </tr>
+  </table>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="clear" style="margin-top:15px;"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

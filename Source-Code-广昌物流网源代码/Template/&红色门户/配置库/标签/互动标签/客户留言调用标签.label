@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <LabelID>407</LabelID>
+    <LabelName>客户留言调用标签</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_KHLY分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_Pub_KHLY</LabelTable>
+    <LabelField>PubAddTime,PubContent,PubUserName</LabelField>
+    <LabelWhere>ZL_Pub_KHLY.Pubupid=1 And ZL_Pub_KHLY.Pubstart=1 And uid={$GetRequest(uid)$}</LabelWhere>
+    <LabelOrder>ZL_Pub_KHLY.ID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div style=" width:650px; margin:auto; border-bottom:1px solid #8DADD6;"&gt;
+    &lt;div class="pl_tit"&gt;&lt;span&gt;发表于：{Field="PubAddTime"/}&lt;/span&gt;{Field="PubUserName"/}网友&lt;/div&gt;
+    &lt;div&gt;{Field="PubContent"/}&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}&lt;br /&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</DocumentElement>

@@ -1,0 +1,83 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/shop.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+window.onload=function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+	}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+	#list li{ position:relative;cursor:pointer; width:210px; height:27px; line-height:27px; display:block; z-index:2; }
+	#list .lihover{ background:#FFFAF1; height:22px; line-height:22px; border:2px solid #8C0B01; border-right-width:0px; }
+	#list li div{position:absolute; z-index:1010; left:180px; top:-2px ; width:400px; display:none; background:#FFFAF1; border:2px solid #8C0B01; }
+	#list .span1{ display:block; position:absolute; z-index:999999; left:-2px; top:0px;  width:2px;  background:#FFFAF1;  !important; height:22px;}
+</style>
+</head>
+
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+<div class="clear" style="margin-top:12px;"></div>
+
+<div id="main">
+<div id="WebAd001">
+<p>您的位置：<a href="{ZL:GetNodeLinkUrl(47)/}">物流商城</a> >> {ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /} >> {SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</p>
+</div>
+<div class="clear"></div>
+{ZL.Label id="商城列表右部"/}
+<div id="neirong_R">
+<div id="myTabContent2" >
+{ZL.Label id="产品列表" NodeID="{SField sid="节点栏目信息数据源" FD="Nodeid" page="0"/}" ShowNum="20" TitleNumber="60" /}
+</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

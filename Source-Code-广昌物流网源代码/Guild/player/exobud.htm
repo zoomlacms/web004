@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>播放器</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE TYPE="text/css">
+<!--
+     A:LINK 
+{
+	 COLOR: silver;
+	 TEXT-DECORATION: none ;
+}
+     A:HOVER 
+{
+	 COLOR: white;
+	 TEXT-DECORATION: none ;
+}
+     A:ACTIVE 
+{
+	 COLOR: white;
+	 TEXT-DECORATION: none ;
+}
+     A:VISITED 
+{
+	 COLOR: silver;
+	 TEXT-DECORATION: none ;
+}
+     BODY 
+{
+	 MARGIN: 0px 0px 0px 0px;
+}
+ .TITLE
+{
+	 FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+	 FONT-SIZE: 11px;
+	 COLOR:#333333;
+	 ;
+}
+.TIME
+{
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+	 FONT-SIZE: 10px;
+	 COLOR:#333333;
+}
+td {
+	font-size: 12px;
+}
+.copyright {FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #999999; FONT-FAMILY: Verdana, Tahoma, Arial, Sans-Serif;
+}
+.style17 {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #999999;
+}
+.style18 {
+	font-size: 12px;
+	color: #999999;
+}
+body {
+	background-image: url(bg2.gif);
+}
+.style22 {color: #999999}
+-->
+</STYLE>
+
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+//-->
+</script>
+<SCRIPT Language="JavaScript" src="Exobud.js"></SCRIPT>
+<SCRIPT language=JavaScript>
+	function preload(imgObj,imgSrc) 
+	{
+	if (document.images) 
+	{
+		eval(imgObj+' = new Image()')
+		eval(imgObj+'.src = "'+imgSrc+'"')
+	}
+	}
+	preload("meter0", "player.volmeter.0.gif");
+	preload("meter1", "player.volmeter.1.gif");
+	preload("meter2", "player.volmeter.2.gif");
+	preload("meter3", "player.volmeter.3.gif");
+	preload("meter4", "player.volmeter.4.gif");
+	preload("meter5", "player.volmeter.5.gif");
+	preload("meter6", "player.volmeter.6.gif");
+	preload("meter7", "player.volmeter.7.gif");
+	preload("meter8", "player.volmeter.8.gif");
+	preload("meter9", "player.volmeter.9.gif");
+	preload("meter10", "player.volmeter.10.gif");
+</SCRIPT>
+<SCRIPT Language="JavaScript">
+<!--
+//基本功能设置，true为开放，false为关闭。
+//定义是否自动播放
+var blnAutoStart = true;
+//定义是否循序播放
+var blnRndPlay = true; 
+//定义是否显示状态栏
+var blnStatusBar = true; 
+//定义是否显示音控状态
+var blnShowVolCtrl = true;
+//定义是否允许显示播放清单
+var blnShowPlist = true;
+//定义是否使用SMI模式（如无需要请勿修改）
+var blnUseSmi = false;
+//定义是否循环播放
+var blnLoopTrk = true;
+//定义是否跳出歌曲信息
+var blnShowMmInfo =false;
+-->
+</SCRIPT>
+<SCRIPT language=javascript src="exobudpl.js"></SCRIPT>
+<script language="javascript" src="time.js"></script>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=openStateChange(sf)> evtOSChg(sf); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=playStateChange(ns)> evtPSChg(ns); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=error()> evtWmpError(); </SCRIPT>
+<SCRIPT Language ="JScript" FOR=Exobud EVENT=Buffering(bf)> evtWmpBuff(bf);</SCRIPT>
+<SCRIPT Language ="JavaScript" src="imgchg.js"></SCRIPT>
+</head>
+<body bgcolor="Black" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 
+    onLoad="var SymTmpWinOpen = window.open; window.open = SymWinOpen; initExobud();show5();; window.open = SymTmpWinOpen;" 
+    oncontextmenu="return false" ondragstart="return false" 
+    onselectstart="return false">
+<table width="418" border="0" cellpadding="0" cellspacing="0" background="images/bgs.jpg">
+  <tr> 
+    <td height="27">
+<table border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+           <td><img  name="playt" src="images/btn_play.jpg" width="33" height="30"  onClick="startExobud();this.blur();" style="cursor:hand;" title="播放"><object classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" type="application/x-oleobject" width="0" height="0" id=Exobud style="position:relative; left:0px; top:0px; width:0px; height:0px;">
+            <param name="autoStart" value="true">
+            <param name="balance" value="0">
+            <param name="currentPosition" value="0">
+            <param name="currentMarker" value="0">
+            <param name="enableContextMenu" value="false">
+            <param name="enableErrorDialogs" value="false">
+            <param name="enabled" value="true">
+            <param name="fullScreen" value="false">
+            <param name="invokeURLs" value="false">
+            <param name="mute" value="false">
+            <param name="playCount" value="1">
+            <param name="rate" value="1">
+            <param name="uiMode" value="none">
+            <param name="volume" value="100">
+          </object></td>
+          <td><img  name="pauzt" src="images/btn_pauz_off.jpg" width="28" height="30"  onClick="wmpPP();this.blur();" style="cursor:hand;" title="暂停/继续"></td>
+          <td><img  name="stopt" src="images/btn_stop.jpg" width="25" height="30"  onClick="wmpStop();this.blur();" style="cursor:hand;" title="停止"></td>
+          <td><img   name="prevt" src="images/btn_prev.jpg" width="25" height="30"  onClick="playPrev();this.blur();" style="cursor:hand;" title="上一首"></td>
+          <td><img  name="nextt" src="images/btn_next.jpg" width="26" height="30"  onClick="playNext();this.blur();" style="cursor:hand;" title="下一首"></td>
+        </tr>
+      </table>
+    </td>
+    <td width="80" align="right" background="images/bgs.jpg"> <span id="disp2" width=100 class="time" align="center" title ="时间显示" style="cursor:hand;color:#FFF"> 
+      00:00|00:00 </span></td>
+    <td height="27"><table border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td width="25"><img  name="vmute" src="images/btn_mute_off.jpg" width="30" height="30"  onClick="wmpMute();this.blur();" style="cursor:hand;" title="静音(Mute)"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td height="0" colspan="8"> </td>
+  </tr>
+</table>
+</body>
+<script language="JavaScript">
+<!--
+window.open = SymRealWinOpen;
+//-->
+</script>
+</html>

@@ -1,0 +1,19 @@
+﻿
+ .menu1 {
+	FONT-SIZE: 14px; FLOAT: left; WIDTH: 740px; COLOR: #133161; PADDING-TOP: 7px; HEIGHT: 23px; TEXT-ALIGN: left
+}
+a:link {
+	color: #415953;
+	text-decoration: none;
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; font-size:14px;color: #415953;
+}
+TABLE {
+	FONT-SIZE: 12px; LINE-HEIGHT: 150%; border:1px solid #415953; 
+}
+
+.top {
+	WIDTH: auto; HEIGHT: 240px; BACKGROUND-COLOR: #ffffff; padding-top:10px;
+}
+    

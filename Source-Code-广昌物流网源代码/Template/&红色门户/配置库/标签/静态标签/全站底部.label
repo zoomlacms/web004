@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>376</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="footBar"&gt;
+&lt;div id="footnav"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(35)/}" target="_blank"&gt;关于我们&lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(389)/}" target="_blank"&gt;版权声明&lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(390)/}" target="_blank"&gt;隐私保护 &lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt;
+ &lt;li&gt;&lt;a href="/user" target="_blank"&gt;会员中心 &lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href);"&gt;收藏本站 &lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt;
+ &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(391)/}" target="_blank"&gt; 联系我们 &lt;/a&gt;&lt;/li&gt;&lt;li&gt; |&lt;/li&gt; 
+ &lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(19)/}" target="_blank"&gt;招聘信息 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id="copyRight"&gt;
+{$Copyright/}
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

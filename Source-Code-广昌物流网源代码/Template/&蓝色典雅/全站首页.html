@@ -1,0 +1,282 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$SiteName/}-{$SiteTitle/}</title>
+<link href="../../Skin/blue/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+{$MetaKeywords/}
+{$MetaDescription/}
+<script language=javascript src=/skin/blue/js/show.js></script>
+<style type="text/css">
+#Menu0 a span:hover{ text-decoration:underline;}
+#Menu0 a span{background:url(../skin/blue/Images/top_nav.gif) no-repeat 0px -42px; font-weight:bold; color:#fff; text-decoration:none;width:77px; height:38px; display:block;}
+</style>
+
+</head>
+
+<body>
+<!-- 网站顶部 -->
+<div id="WebTop">
+    <p id="logo"><a href="/" target="_blank">  <img src="{$LogoUrl/}" border="0" /></a></p>
+    <ul id="TopNavBar">
+    	<li><iframe src="../Search/indexSearch.aspx" marginwidth="1" marginheight="1" scrolling="no" border="0" frameborder="0" width="480px" height="28px"></iframe></li>
+        <li><a href="../../User/Register.aspx" target="_blank"><strong>注册会员</strong></a>|</li>
+        <li><a href="../../User/" target="_blank"><strong>用户登陆</strong></a>|</li>
+        <li><a href='#' onclick="javascript:window.open('{$SiteURL/}','_blank','left=280,top=250,width=439,height=282,scrollbars=yes')">设为首页</a>|</li>
+        <li><a href="{$SiteURL/}" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href);">加入收藏</a>|</li>
+    </ul>
+    <ul id="Menu">
+        <li id="Menu0"><a href="{$SiteURL/}" target="_blank"><span>首页</span></a></li>
+		{ZL.Label id="蓝色经典_顶部节点列表" ParentID="0" ShowNum="7" /}
+    </ul>
+</div>
+<!-- 网站搜索 -->
+<div id="WebSer">
+<a href="/user/" target="_blank">社区空间精彩导航：</a>
+<a href="/User/UserZone/Parking/Default.aspx">抢车位</a>
+<a href="/User/UserZone/Book/BookList.aspx">读书</a>
+<a href="/User/UserZone/LogManage/SelfLogManage.aspx">日记</a>
+<a href="/User/UserZone/Memo/MemoList.aspx">备忘</a>
+<a href="/User/UserZone/Pic/CategList.aspx">相册</a>
+<a href="/User/UserFriend/">好友</a>
+<a href="/User/UserZone/Book/MusicList.aspx">音乐</a>
+<a href="/User/UserZone/Book/MovieList.aspx">电影</a>
+<a href="/User/UserZone/Home/MyHome.aspx">小屋</a>
+<a href="/User/userzone/GatherStrainManage/GSManage.aspx">族群</a>
+<a href="/User/UserZone/Message/MyMessage.aspx">留言板</a>
+<a href="/User/UserZone/ChitChat.aspx">蒙面聊</a>
+<a href="/User/UserZone/Book/ItineraryList.aspx">旅途</a>
+<a href="/User/UserZone/School/MySchoolList.aspx">班级</a>
+<a href="/guestbook/">问答</a>
+<a href="/User/UserZone/School/AddRessList.aspx">通讯录</a>
+</div>
+
+<div id="topbanner"><img src="/Skin/blue/Images/bannertop.jpg" /></div><!-- 通栏广告位 -->
+
+<div id="WebAd001">
+    <ul>{ZL.Label id="输出指定节点标题_无时间属性" NodeID="77" TitleNum="30" ShowNum="8"/} </ul>
+    <span>
+    <a href="/manage/Panoramic/PanoramicShow.aspx?id=1" target="_blank">三维全景系统演示</a>
+    <a href="3d" target="_blank">3D网上商街展示</a>
+    <a href="try" target="_blank">在线试戴系统</a>
+	<a href="/Questions/Default.aspx?id=1" target="_blank">智能组卷系统</a>
+    </span>
+</div>
+
+<!-- 第一部分 -->
+<div id="Content001">
+<!-- 用户登陆 -->
+<div id="PlanLogin">
+    <div id="WebLogin001">
+        <h2><img src="/Skin/blue/Images/login.gif" /></h2>
+        <p><iframe src="/Login.aspx" frameborder="0" width="180px" height="140px"></iframe></p>
+    </div>
+</div>
+
+<div class="container" id="idTransformView">
+  <ul class="slider" id="idSlider">
+    <li><img src="/skin/blue/images/01.jpg"/></li>
+    <li><img src="/skin/blue/images/02.jpg"/></li>
+    <li><img src="/skin/blue/images/03.jpg"/></li>
+    <li><img src="/skin/blue/images/04.jpg"/></li>
+  </ul>
+  <ul class="num" id="idNum">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</div>
+<!-- 滚动图片特效广告位 -->
+            
+<div class="Infor002">
+<h2>
+    <img src="/Skin/blue/Images/sk011.gif" /><a href='{ZL:GetNodeUrl(76)/}'target="_blank" title="网站公告">网站公告</a></h2>
+        <div id="WebAd003">
+          <a href="mailto:{$WebmasterEmail/}" title="联系{$SiteName/}"><img src="/skin/blue/images/120x60.gif"></a>
+        </div>
+<ul>
+{ZL.Label id="输出指定节点标题列表_带时间属性_指定新窗口大小" NodeID="76" TitleNum="20" ShowNum="3" T_width="400" T_height="440" /}
+</ul>
+</div>
+<div class="clear">
+</div>
+</div>
+
+<div id="main">
+<div id="main_l">
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">更多文章..</a></span>最近更新</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+<div class="main_l_ad"><a href="http://www.zoomla.cn/pub" target="_blank"><img src="/skin/blue/images/213X70.gif" alt="下载最新逐浪CMS" /></a></div>
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">更多推荐..</a></span>最新推荐</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">更多热门..</a></span>最新热门</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+<div class="main_l_ad"><img src="/skin/blue/images/213X70-2.gif" /></div>
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">更多会员..</a></span>热门会员</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">更多问券..</a></span>问券调查</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+<div class="main_l_ad"><img src="/skin/blue/images/213X70-3.gif" /></div>
+
+<div class="main_l_show">
+<div class="main_l_title"><span><a href="{ZL:GetNodeUrl(78)/}">进入SNS社区..</a></span>新开空间</div>
+<ul>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+<li><a href="">文章标题文章标题</a></li>
+</ul>
+</div><!--循环块之一结束 -->
+
+</div><!--主体左结束 -->
+
+<div id="main_r">
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(79)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(77)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="77" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="banner_cnetet"><img src="/skin/blue/images/banner_cnetet.gif" /></div>
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="banner_cnetet"><img src="/skin/blue/images/banner_cnetet2.gif" /></div>
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+<div class="main_r_show">
+<div class="main_r_title"><span><a href="{ZL:GetNodeUrl(78)/}">More..</a></span>{ZL.Label id="输出指定ID节点名" NodeID="79" /}</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="79" TitleNum="30" ShowNum="5" /}
+</ul>
+</div><!--右边循环块之一结束 -->
+
+</div><!--主体左结束 -->
+
+
+</div><!--主体结束 -->
+
+<div style="clear:both;"></div>
+
+<div class="bottom_show">
+<div id="tb_" class="tb_ tabs">
+<ul>
+    <li id="tb_1" onmouseover="HoverLi(1);"><a href="#">栏目导航</a></li>
+    <li id="tb_2" onmouseover="HoverLi(2);"><a href="#">栏目导航</a></li>
+</ul>
+</div>
+<div class="ctt">
+    <div class="dis" id="tbc_01">内容1</div>
+    <div class="undis" id="tbc_02">内容2</div>
+</div>
+    
+</div><!--下方图片大块 -->
+
+<div id="Fri_show_title">友情链接</div>
+<div id="Fri_txt">
+<ul>
+{ZL.Label id="友情链接缩略图列表输出" ShowNum="10" NodeID="88" /}
+</ul>
+</div>
+<!--友情链接结束 -->
+
+<div style="clear:both;"></div>
+{ZL.Label id="蓝色底部"/}
+
+<script>var companyname = "逐浪软件";</script>
+<script src="OnlineService/js/kf.js"></script>
+</body>
+</html>

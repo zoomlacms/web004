@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <LabelID>391</LabelID>
+    <LabelName>黄页主左部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="hyleft"&gt;
+	&lt;span class="title"&gt;&lt;a href="/ColumnList.aspx?NodeID=42&amp;uid={$GetRequest(uid)$}"&gt;企业首页&lt;/a&gt;&lt;/span&gt;
+	&lt;span class="face"&gt;
+		&lt;a href="/ColumnList.aspx?NodeID=42&amp;uid={$GetRequest(uid)$}"&gt;&lt;img src="{$UploadDir/}{SField sid="企业会员数据源" FD="name" page="0"/}" &gt;&lt;/a&gt;&lt;br /&gt;
+		{SField sid="企业会员数据源" FD="name" page="0"/}
+		&lt;/span&gt;
+		
+		&lt;span class="title"&gt;&lt;a href=""&gt;公司信息&lt;/a&gt;&lt;/span&gt;	
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=43&amp;uid={$GetRequest(uid)$}"&gt;企业简介&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=44&amp;uid={$GetRequest(uid)$}"&gt;企业动态&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;			
+		&lt;span class="title"&gt;&lt;a href=""&gt;物通天下&lt;/a&gt;&lt;/span&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=45&amp;uid={$GetRequest(uid)$}"&gt;车源信息&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=46&amp;uid={$GetRequest(uid)$}"&gt;货源信息&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=47&amp;uid={$GetRequest(uid)$}"&gt;专线信息&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;span class="title"&gt;&lt;a href="/ColumnList.aspx?NodeID=49&amp;uid={$GetRequest(uid)$}"&gt;客户留言&lt;/a&gt;&lt;/span&gt;
+	&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</DocumentElement>

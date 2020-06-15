@@ -1,0 +1,99 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Guild_GuildPage, App_Web_j4bxeeai" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title> <%=title %></title> 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
+<%=add %>
+<asp:ContentPlaceHolder ID="headCon" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+<script language="javascript" type="text/javascript">
+    function autoScrollDiv(id) {
+        this.dbody = document.getElementById(id);
+        this.dbody.style.position = "absolute";
+        var control = this.dbody;
+        window.onscroll = function() {
+            var posY = document.documentElement.scrollTop || document.body.scrollTop;
+            control.style.top = posY + "px";
+        }
+    }
+    //var a = new autoScrollDiv("top_bar"); 
+    </script>
+<body>
+    <%=skins %>
+    <%=mouse %>
+    <form id="form1" runat="server">
+    <!--顶工具栏开始-->
+    <div id="top_bar" style="position:fixed; left:0px;top:0px;z-index:1;width:100%;height:80px;line-height:80px;">
+                <div id="top_bar_txt">
+            <span>
+                <img src="\Guild\css\skin\images\home.jpg" />
+                <a href="/">唯乐网首页</a>
+                <img src="\Guild\css\skin\images\bbs.jpg" />
+                <a href="/Forum/">玩者论坛</a>
+                <img src="\Guild\css\skin\images\ask.jpg" />
+                <a href="">一问多答</a> </span>
+                <p>
+                <iframe src="/Guild/player/exobud.htm" name="topFrame" style="margin-top:3px" scrolling="NO" width="428" height="30"></iframe>
+                </p>
+        </div>
+    </div>
+    <!--顶工具栏结束 -->
+    <!--头图片开始-->
+    <div id="head">
+    <div class="di">
+            <div class="title" id="titlediv" runat="server">
+            </div>
+        </div>
+        <div class="di">
+            <div class="url">
+            </div>
+        </div>
+    </div>
+    <!--头图片结束 -->
+    <!--主导航开始 -->
+<div class="nav">
+<ul>
+<li><a href="/Guild/Default.aspx?ID=<%=ID %>">首页</a></li>
+<li><a href='/Guild/Article.aspx?ID=<%=ID %>'>公会文集</a></li>
+<li><a href='/Guild/Photo.aspx?ID=<%=ID %>'>公会影画</a></li>
+<li><a href='/Guild/GuildMember.aspx?ID=<%=ID %>'>公会成员</a></li>
+<li><a href='/Guild/UserDevote.aspx?ID=<%=ID %>'>公会贡献</a></li>
+<li><a href="/Forum/GHForum.aspx?GHID=<%=ID %>">公会论坛</a></li>
+<li><a href="">3D会议室</a></li>
+<li><a href="/">斗牛场</a></li>
+<li><a href='/Guild/manage/GuildManage.aspx?ID=<%=ID %>'>公会管理</a></li>          
+<li><asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Red" OnClick="LinkButton1_Click">恢复默认</asp:LinkButton></li> 
+</ul>
+</div>
+<!--主导航结束 -->
+<!--广告位开始 -->
+<div class="banner"></div>
+<!--广告位结束 -->
+    <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="clearfix">
+    </div>
+
+    <script> 
+<!--
+        function windowOpener(url) {
+            window.open(url, "show", "menubar=no,toolbar=no,location=no,directories=no,status=no,width=560,height=550,left=80,top=20,scrollbars=yes");
+        }
+-->
+    </script>
+
+    <!--主体结束-->
+    <div class="bottom">
+<img src="\Guild\css\skin\images\qj\bottom_logo.jpg" />
+<span>Powered by 唯乐网  不良信息举报电话：010-64888888<br />
+XXX公会网站制作由【唯乐网】提供
+</span>
+</div>
+    </form>
+</body>
+</html>

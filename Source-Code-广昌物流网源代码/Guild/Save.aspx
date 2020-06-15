@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Guild_Save, App_Web_j4bxeeai" viewStateEncryptionMode="Never" %>

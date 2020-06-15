@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <LabelID>378</LabelID>
+    <LabelName>根据搜索输出标题列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|TitleNum,30,1,标题长度|ShowNum,10,1,分页显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_yuan on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_yuan.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_C_yuan.chufa,{table1}.dbo.ZL_C_yuan.message,{table1}.dbo.ZL_C_yuan.mudi,{table1}.dbo.ZL_C_yuan.time</LabelField>
+    <LabelWhere>status=99 And Title like '%{$GetRequest(key)$}%' And TableName='ZL_C_yuan' And (NodeID=@NodeID or FirstNodeID=@NodeID)</LabelWhere>
+    <LabelOrder>OrderID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr style=" height:30px;  background:#F4FAFF;"&gt;
+    &lt;td width="20%"&gt;{Field="chufa"/}&lt;/td&gt;
+    &lt;td width="20%"&gt;{Field="mudi"/}&lt;/td&gt;
+    &lt;td width="40%"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="message"/}" target="_blank"&gt;{Field="message"/}&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="20%"&gt;{ZL:FormatDate({Field="time"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;/tr&gt;
+{/Repeate}
+&lt;tr style=" height:30px; background:#F4FAFF;"&gt;&lt;td colspan="4"&gt;{ZL.Page/}&lt;/td&gt;&lt;/tr&gt;</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</DocumentElement>

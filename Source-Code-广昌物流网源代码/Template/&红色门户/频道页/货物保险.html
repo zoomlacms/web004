@@ -1,0 +1,115 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+
+<body>
+{ZL.Label id="全部头部"/}
+ <!-- 网站头部结束 -->
+ 
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+
+<!-- 网站主体 -->
+<div id="mysite">
+	<p>您的位置：<a href="/">{$SiteName/}</a>>>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}>>栏目列表</p>
+</div>
+<div id="main">
+<div id="main_left">
+
+<div id="pingdao">
+	<div class="pingdao_tit">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</div>
+    <div style=" text-align:center; background:#f4f4f4; margin-top:2px;">
+    <form method="get" action="ColumnList.aspx" target="_self">
+    <input type="hidden" name="NodeID" id="NodeID" value="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}">
+	<div id="qyform">
+		<label>险种类型：</label>
+		<select class="inin" name="pinz" id="pinz">
+        	<option value="">==请选择==</option>
+            <option value="货运保险">货运保险</option>
+            <option value="车辆保险">车辆保险</option>
+            <option value="承运人责任险">承运人责任险</option>
+            <option value="其他保险">其他保险</option>
+        </select>
+        <label>信息类型：</label>
+		<select class="inin" name="lei" id="lei">
+        	<option value="">==请选择==</option>
+            <option value="供应">供应</option>
+            <option value="需求">需求</option>
+        </select>
+        <label>服务区域：</label>
+		<input type="text" name="quyu" id="quyu" class="inin"  value=""  style=" width:100px;"/>
+		<input type="image" src="/skin/gcwuliu/images/qy_search.gif" class="sub" />
+	</div>
+	</form>
+    </div>
+    <table width="100%" style=" text-align:center; padding:2px; border:1px solid #FFC28C; " cellpadding="0" cellspacing="0">
+    	<tr style=" height:30px; background:#FFFCCC;">
+        	<th width="45%">信息标题</th>
+        	<th width="10%">信息类型</th>
+            <th width="15%">服务区域</th>
+            <th width="15%">险种类型</th>
+            <th width="15%">发布时间</th>
+        </tr>
+       	{ZL.Label id="货物保险列表信息分页" NodeID="156" ShowNum="30" /}
+    </table>
+</div>
+
+</div><!-- 网站主体左 -->
+{ZL.Label id="网站主体右"/}
+<!-- 网站主体右 -->
+</div>
+<div style=" clear:both;"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

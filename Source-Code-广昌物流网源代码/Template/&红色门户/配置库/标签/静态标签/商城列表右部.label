@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>448</LabelID>
+    <LabelName>商城列表右部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="neirong_L"&gt;
+&lt;div id="elit_L"&gt;
+&lt;div class="kstd" id="list"&gt;
+&lt;div id="elit_L_tit"&gt;&lt;b&gt;&lt;a href="{ZL:GetNodeListUrl(2)/}" target="_blank"&gt;所有商品分类&lt;/a&gt;&lt;/b&gt;&lt;/div&gt;
+&lt;ul id="maindl"&gt; 	
+&lt;li&gt;&lt;span class="c1"&gt;潮流服饰&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="48" /}
+&lt;/div&gt;
+&lt;/li&gt;	
+&lt;li &gt;&lt;span class="c2"&gt;精品鞋包&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="49" /}        
+&lt;/div&gt;
+&lt;/li&gt;	
+&lt;li &gt;&lt;span class="c3"&gt;美容护肤&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="50" /} 
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c4"&gt;珠宝饰品&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+  {ZL.Label id="循环输出商品导航" ParentID="51" /}         
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c5"&gt;运动户外&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+ {ZL.Label id="循环输出商品导航" ParentID="52" /}     
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c6"&gt;手机数码&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+ {ZL.Label id="循环输出商品导航" ParentID="53" /}  
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c7"&gt;居家生活&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="54" /}       
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c8"&gt;家电家装&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="55" /}       
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c9"&gt;母婴用品&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="56" /}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c10"&gt;食品保健&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="57" /}
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li &gt;&lt;span class="c11"&gt;图书音像&lt;/span&gt;
+&lt;div class="main_left_con_l"&gt;
+&lt;span class="span1"&gt;&lt;/span&gt;
+{ZL.Label id="循环输出商品导航" ParentID="58" /}      
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;script type="text/javascript"&gt;
+function menu(){//声明函数
+ var sfEls = document.getElementById("list").getElementsByTagName("li");
+
+for (var i=0; i&lt;sfEls.length; i++) {
+  sfEls[i].onmouseover=function(){//当outer鼠标移入时候执行：
+  this.getElementsByTagName("div")[0].style.display="block";//this指outer本身；它下面的ul的样式display=block，也就是显示；
+  this.className='lihover';
+ }
+ sfEls[i].onmouseout=function(){//当outer鼠标移出时候执行：
+  this.getElementsByTagName("div")[0].style.display="none";//this指outer本身；它下面的ul的样式display=none，也就是隐藏；
+  this.className='';
+ }
+}
+}
+menu();//执行函数
+&lt;/script&gt; 
+&lt;script&gt;
+var dlEm=document.getElementById("maindl").getElementsByTagName("dl");
+
+for(var i=0; i&lt;=dlEm.length; i++){
+	if(dlEm[i]){
+	dlEm[i].onmouseover=function() {		
+		this.className='dlhover';
+	  }
+	dlEm[i].onmouseout=function() {
+	this.className='';
+	  }}
+	}
+&lt;/script&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;div class="picad"&gt;&lt;img src="../../../Skin/gcwuliu/images/100929151535974.gif"&gt;&lt;/div&gt;
+&lt;div class="wortop"&gt;
+&lt;div class="wortit"&gt;&lt;b&gt;促销公告&lt;/b&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#" target="_blank"&gt;单笔订单满600元， 送50.优惠券 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" target="_blank"&gt;单笔订单满600元， 送5优惠券 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" target="_blank"&gt;单笔订单满600元， 送50.惠券 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" target="_blank"&gt;单笔订单满600元， 送5优惠券 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" target="_blank"&gt;单笔订单满600元， 送50优惠券 &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="picadd"&gt;&lt;img src="../../../Skin/gcwuliu/images/btn04.jpg"&gt;&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

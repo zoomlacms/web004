@@ -1,0 +1,163 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<link href="../../../Skin/gcwuliu/shichang.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+</head>
+
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+
+<div id="fw_main">
+	
+<div id="fwpin1">
+<div id="fwpin1_l">
+    <div class="fwpin1_l_tit"><p>学院动态</p></div>
+    <ul>
+        {ZL.Label id="输出指定节点标题_无时间属性" NodeID="39" TitleNum="40" ShowNum="10" /}
+    </ul>
+</div>
+<div id="fwpin1_m">
+    <div class="zczc"><p>三维影像</p></div>
+     <ul>
+        {ZL.Label id="三维影像列表信息" ShowNum="10" /}
+    </ul>
+</div>
+<div id="fwpin1_r">
+    <div class="flrz"><p>法律案例</p></div>
+    <ul>
+        {ZL.Label id="输出指定节点标题_无时间属性" NodeID="40" TitleNum="40" ShowNum="5" /}
+    </ul>
+    <div class="bm"><a href="{ZL:GetNodeLinkUrl(165)/}"><img src="../../../Skin/gcwuliu/images/11.jpg"></a></div>
+</div>
+</div>
+<div style=" margin:8px auto;"><img src="../../../Skin/gcwuliu/images/fwpt/20100311002.jpg" /></div>	
+<div id="fwpin1">
+<div id="wl">
+<div id="wlal">
+	<div id="wlal_tit"><p>物流案例</p></div>
+    <ul>
+        {ZL.Label id="输出指定节点标题_无时间属性" NodeID="23" TitleNum="40" ShowNum="10" /}
+    </ul>
+</div>
+<div id="wlal">
+	<div id="wlal_tit"><p>物流知识</p></div>
+    <ul>
+        {ZL.Label id="输出指定节点标题_无时间属性" NodeID="22" TitleNum="40" ShowNum="10" /}
+    </ul>
+</div>
+</div>
+<div id="zpqz">
+<table width="100%" cellpadding="0" cellspacing="1" border="0" style=" background:#A9C4E2;">
+<tr style=" height:25px; line-height:25px; background:#F7FCFF;"><td class="zp1"><span><a href="{ZL:GetNodeLinkUrl(19)/}">更多</a></span><b>招聘信息</b></td></tr>
+<tr style=" background:#FFF;"><td>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr style=" height:25px;">
+            <td width="40%" class="str5">职位名称</td>
+            <td width="20%" class="str5">职位类型</td>
+            <td width="20%" class="str5">工作地点</td>
+            <td width="20%" class="str5">发布时间</td>
+        </tr>
+        {ZL.Label id="最新职位信息_新闻中心" ShowNum="0" /}
+    </table>
+
+</td></tr>
+</table>
+<div style=" clear:both;"></div>
+<table width="100%" cellpadding="0" cellspacing="1" border="0" style=" background:#A9C4E2; margin-top:8px;">
+<tr style=" height:25px; line-height:25px; background:#F7FCFF;"><td class="zp1"><span><a href="">更多</a></span><b>律师介绍</b></td></tr>
+<tr style=" background:#FFF;"><td>
+<div id="dddd">
+    <div id="indddd">
+    <div id="dddd1">
+    <ul>
+        {ZL.Label id="输出指定节点缩略图与标题列表" NodeID="38" TitleNum="20" ShowNum="10" /}
+    </ul>    
+    </div>
+    <div id="dddd2"></div>
+    </div>
+    </div>
+</td></tr>
+</table>
+<script>
+    var speed=10; 
+    var tab=document.getElementById("dddd");
+    var tab1=document.getElementById("dddd1");
+    var tab2=document.getElementById("dddd2");
+    tab2.innerHTML=tab1.innerHTML;
+    function Marquee(){
+    if(tab2.offsetWidth-tab.scrollLeft<=0)
+    tab.scrollLeft-=tab1.offsetWidth
+    else{
+    tab.scrollLeft++;
+    }
+    }
+    var MyMar=setInterval(Marquee,speed);
+    tab.onmouseover=function() {clearInterval(MyMar)};
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+ </script>
+</div>   
+</div>
+<div style=" margin:8px auto;"><img src="../../../Skin/gcwuliu/images/fwpt/20100311002.jpg" /></div>
+<div id="hezuo">
+	<div class="zczc"><span>更多>></span><p>合作机构</p></div>
+    <ul>
+         {ZL.Label id="输出指定节点缩略图与标题列表" NodeID="46" TitleNum="20" ShowNum="10" /}
+    </ul>
+</div>
+</div>
+<!-- 网站底部 -->
+<div class="clear"></div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>

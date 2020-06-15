@@ -1,0 +1,128 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+</head>
+
+<body>
+{ZL.Label id="全部头部"/}
+<div style=" clear:both;"></div>
+{ZL.Label id="网站导航"/}
+
+<div id="gc_main">
+<div id="gc_pin1">
+<div id="gcm_l">
+	{ZL.Label id="输出广昌物流简介" NodeID="43" /}
+</div>	
+<div id="gcm_r">
+	<div class="zczc"><span><a href="{ZL:GetNodeLinkUrl(45)/}" target="_blank">更多...</a></span><p>政策支持</p></div>
+    <ul>
+    	{ZL.Label id="推荐新闻" NodeID="45" ShowNum="20" /}
+    </ul>
+</div>
+</div>
+<div style=" clear:both; margin:8px auto;"><img src="../../../Skin/gcwuliu/images/ads_center1.gif"></div>
+<div id="gc_pin1">
+<div id="gcm_l">
+	<div id="gc_wlr">
+    	<div class="zczc"><span><a href="{ZL:GetNodeLinkUrl(44)/}" target="_blank">更多...</a></span><p>广昌物流人</p></div>
+		{ZL.Label id="广昌物流人_推荐" ShowNum="4" NodeID="44" /}
+    </div>
+</div>	
+<div id="gcm_r">
+	<div class="zczc"><span><a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank">更多...</a></span><p>最新企业</p></div>
+    <ul>
+    	{ZL.Label id="输出最新企业信息3" TitleNum="40" ShowNum="12" /}
+    </ul>
+</div>
+</div>
+
+<div id="gc_pin3">
+	<div class="zczc"><span><a href="{ZL:GetNodeLinkUrl(8)/}">更多...</a></span><p>莲乡风采</p></div>
+    <div id="cdcd">
+    <div id="incdcd">
+    <div id="cdcd1">
+    <ul>
+        {ZL.Label id="输出指定节点缩略图与标题列表" NodeID="8" TitleNum="20" ShowNum="10" /}
+    </ul>    
+    </div>
+    <div id="cdcd2"></div>
+    </div>
+    </div>
+    
+</div>
+
+<script>
+    var speed=10; 
+    var tab=document.getElementById("cdcd");
+    var tab1=document.getElementById("cdcd1");
+    var tab2=document.getElementById("cdcd2");
+    tab2.innerHTML=tab1.innerHTML;
+    function Marquee(){
+    if(tab2.offsetWidth-tab.scrollLeft<=0)
+    tab.scrollLeft-=tab1.offsetWidth
+    else{
+    tab.scrollLeft++;
+    }
+    }
+    var MyMar=setInterval(Marquee,speed);
+    tab.onmouseover=function() {clearInterval(MyMar)};
+    tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+ </script>
+
+
+</div>
+
+
+
+
+
+<div class="clear"></div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>

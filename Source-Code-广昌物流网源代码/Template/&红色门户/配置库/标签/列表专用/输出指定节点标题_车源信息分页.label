@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>384</LabelID>
+    <LabelName>输出指定节点标题_车源信息分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|ShowNum,10,1,调用信息数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_yuan on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_yuan.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_C_yuan.chufa,{table1}.dbo.ZL_C_yuan.hclei,{table1}.dbo.ZL_C_yuan.message,{table1}.dbo.ZL_C_yuan.mudi,{table1}.dbo.ZL_C_yuan.time</LabelField>
+    <LabelWhere>NodeID=@NodeID and status=99 And {table1}.dbo.ZL_C_yuan.chufa like '%{$GetRequest(chufa)$}%' And {table1}.dbo.ZL_C_yuan.mudi like '%{$GetRequest(mudi)$}%'</LabelWhere>
+    <LabelOrder>OrderID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr style=" height:30px" onMouseOver="this.style.backgroundColor=&amp;quot;#FEF&amp;quot;" onMouseOut="this.style.backgroundColor=&amp;quot;&amp;quot;"&gt;
+    &lt;td width="10%"&gt;{Field="hclei"/}&lt;/td&gt;
+    &lt;td width="15%"&gt;{Field="chufa"/}&lt;/td&gt;
+    &lt;td width="15%"&gt;{Field="mudi"/}&lt;/td&gt;
+    &lt;td width="45%"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="message"/}" target="_blank"&gt;{Field="message"/}&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="15%"&gt;{ZL:FormatDate({Field="time"/},yyyy-MM-dd)/}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan="5" style="height:1px; border-bottom:1px dashed #dfdfdf;"&gt;&lt;/td&gt;&lt;/tr&gt;
+{/Repeate}
+&lt;tr style=" height:30px"&gt;&lt;td colspan="5"&gt;{ZL.Page/}&lt;/td&gt;&lt;/tr&gt;</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,182 @@
+﻿<%@ master language="C#" masterpagefile="~/Guild/GuildPage.master" autoeventwireup="true" inherits="Guild_manage_GuildManagePage, App_Web_afyd0lir" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div id="left" class="main_l">
+            <div class="main_l_k" >
+                <div class="main_l_k_t">
+                    公会基本信息管理</div>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="guide">
+                    <tr>
+                        <td width="12%" height="20">
+                            &nbsp;
+                        </td>
+                        <td width="88%" align="left">
+                            <a href='/Guild/manage/GuildManage.aspx?ID=<%=ID %>'>公会信息</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildTrem.aspx?ID=<%=ID %>'>入会条件修改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildGame.aspx?ID=<%=ID %>'>主打游戏设置</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildWelcome.aspx?ID=<%=ID %>'>首页欢迎词设置</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildPlacard.aspx?ID=<%=ID %>'>公会公告管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildColumn.aspx?ID=<%=ID %>'>首页栏目管理</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="main_l_k">
+                <div class="main_l_k_t">
+                    公会网站信息管理</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="guide">
+                    <tr>
+                        <td width="12%" height="20">
+                            &nbsp;
+                        </td>
+                        <td width="88%" align="left">
+                            <a href='/Guild/manage/GuildTemplate.aspx?ID=<%=ID %>'>主页模版更改</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildImg.aspx?ID=<%=ID %>'>会标通栏管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildLeve.aspx?ID=<%=ID %>'>会员级别管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href="/Guild/manage/GuildSkins.aspx?ID=<%=ID %>">页面个性设置</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildVote.aspx?ID=<%=ID %>'>公会投票管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildLink.aspx?ID=<%=ID %>'>友情链接管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildDownload.aspx?ID=<%=ID %>'>公会下载管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href='/Guild/manage/GuildMusic.aspx?ID=<%=ID %>'>公会音乐设置</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="main_l_k">
+                <div class="main_l_k_t">
+                    公会论坛管理</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="guide">
+                    <tr>
+                        <td width="12%" height="20">
+                            &nbsp;
+                        </td>
+                        <td width="88%" align="left">
+                            <a href="/Guild/bbs/Guildbbs.aspx?ID=<%=ID %>">版块管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href="/Guild/bbs/GuildTitleMange.aspx?ID=<%=ID %>">头衔管理</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href="/Guild/bbs/GuildMeal.aspx?ID=<%=ID %>">会员勋章系统</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href="#">经验值设置</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20">
+                            &nbsp;
+                        </td>
+                        <td align="left">
+                            <a href="#">论坛滚动广告管理</a>
+                        </td>
+                    </tr>
+                </table>
+           </div>
+        </div>
+        <div id="center1" style="color:white; width:70%; float:left">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+</asp:Content>
+

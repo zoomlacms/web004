@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Hotinfo, App_Web_lhavxf0l" viewStateEncryptionMode="Never" %>

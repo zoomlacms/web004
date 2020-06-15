@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>386</LabelID>
+    <LabelName>网站主体右</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="main_rig"&gt;
+&lt;div class="main_rig_top"&gt;&lt;/div&gt;
+
+&lt;div class="rig_tit rigt3"&gt;网站公告&lt;/div&gt;
+&lt;div class="mainR_gg"&gt;
+&lt;ul&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="32" TitleNum="25" ShowNum="6" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="rig_tit rigt4"&gt;最新配货&lt;/div&gt;
+&lt;div class="mainR_gg"&gt;
+&lt;ul&gt;
+{ZL.Label id="手机配货" NodeID="15" ShowNum="6" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="main_rban"&gt;
+&lt;script type="text/javascript" src="{$AdDir/}/201010/3.js"&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class="rig_tit rigt5"&gt;企业展示&lt;/div&gt;
+&lt;div class="mainR_com"&gt;
+&lt;ul&gt;
+{ZL.Label id="输出最新企业信息" TitleNum="25" ShowNum="5" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="main_rig_bot"&gt;&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

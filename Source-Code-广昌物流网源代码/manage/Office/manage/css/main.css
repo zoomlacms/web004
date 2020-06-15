@@ -1,0 +1,32 @@
+body	{margin:0px;font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;font-size:12px;}
+A {TEXT-DECORATION: none;}
+.cleardiv{clear:both;margin:0px;padding:0px;font-size:0px;line-height:0px;visibility: hidden;height:0px;}
+ul,li{margin:0px;padding:0px;list-style-type:none;}
+h1,h2,h3,h4,h5,h6{margin:0px;padding:0px;}
+img{border:0px;}
+/*ÍøÕ¾Í¨ÓÃ ¶¥²¿*/
+#zo_top{height:48px;background:url(../image/top_bg1.gif) repeat-x #2E86CD;text-align:right;line-height:25px;color:#fff;}
+#zo_top a{color:#fff;}
+#zo_guide{height:30px;line-height:30px;background:url(../image/top_gdbg.gif);color:#fff;}
+#zo_guide ul{float:left;}
+#zo_guide li{float:left;width:80px;text-align:center;border-right:1px solid #2E86CD;	cursor:pointer;}
+.zo_gd_in{background:#004995;}
+.zo_gd_on{background:#2E86CD;font-weight:bold;}
+#zo_guidestr{height:25px;line-height:25px;background:#2E86CD;}
+#zo_guidestr a{color:#fff;}
+#zo_guidestr li	{float:left;padding-left:25px;background:url(../image/icon1.gif) no-repeat 10px 4px;}
+/**/
+#main_guide{border:1px solid #4197E2;padding-left:15px;height:23px;line-height:23px;background:url(../image/icon3.gif) no-repeat 5px center #C7E0F6;color:#0E529D;}
+#main_Version	{margin-top:5px;	border:1px solid #4197E2;padding-left:5px;color:#0E529D;height:25px;line-height:25px;background:url(../image/m_bg1.gif);}
+.main_Info{margin-top:5px;border:1px solid #4197E2;}
+.main_Info h1{padding-left:5px;height:24px;line-height:24px;font-size:12px;color:#0E529D;background:url(../image/m_bg2.gif);}
+.main_Info_a{height:25px;line-height:25px;padding-left:5px;}
+.main_Info_b{padding:5px;}
+.main_Info_b ul{line-height:25px;}
+.main_Info_b li{float:left;padding:5px 10px;}
+.main_Info_c ul{float:left;width:50%;background:#F1F8FE;height:23px;line-height:23px;border-bottom:1px solid #fff;}
+.main_Info_c li{float:left;padding-left:5px;
+	height: 23px;
+}
+.main_Info_c h2{font-size:12px;font-weight:normal ;text-align:center;height:23px;line-height:23px;background:#F1F8FE;}
+.m_info_l{width:110px;text-align:right;background:#CBE6FC;padding:0px 5px 0px 0px;}

@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>385</LabelID>
+    <LabelName>网站导航</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="navBar"&gt;
+&lt;div id="nav"&gt;
+&lt;ul&gt;
+    &lt;li class="menu0"&gt;&lt;a href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu1"&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank"&gt;新闻资讯&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank"&gt;物流市场&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu24"&gt;&lt;a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank"&gt;物流黄页&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu3"&gt;&lt;a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank"&gt;服务平台&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu41"&gt;&lt;a href="{ZL:GetNodeLinkUrl(41)/}" target="_blank"&gt;广昌物流&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu157"&gt;&lt;a href="{ZL:GetNodeLinkUrl(157)/}" target="_blank"&gt;爱心家园&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu156"&gt;&lt;a href="{ZL:GetNodeLinkUrl(156)/}" target="_blank"&gt;货物保险&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li class="menu47"&gt;&lt;a href="{ZL:GetNodeLinkUrl(47)/}" target="_blank"&gt;物流商城&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/t" target="_blank"&gt;物流微博&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;|&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://t027.2010.hx008.cn/" target="_blank"&gt;物流论坛&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

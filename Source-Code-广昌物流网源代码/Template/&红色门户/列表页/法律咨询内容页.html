@@ -1,0 +1,114 @@
+﻿{ZL.Source id="法律咨询数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="法律咨询数据源标签" FD="PubTitle" page="0"/}_法律咨询_{$SiteName/}</title>
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+
+<body>
+{ZL.Label id="全部头部"/}
+ <!-- 网站头部结束 -->
+ <!--网站导航-->
+ {ZL.Label id="网站导航"/}
+  <!--网站导航结束-->
+<!-- 网站主体 -->
+<div id="mysite">
+	<p>您的位置：<a href="/">{$SiteName/}</a>>>法律咨询>>{SField sid="法律咨询数据源标签" FD="PubTitle" page="0"/}</p>
+</div>
+<div id="CONmain">
+<div class="layout grid-m0s250 clearfix">
+<div class="col-main">
+<div class="main-wrap main-wrap-skin-yellow">
+    <div class="bd">
+        <div class="con">
+            <div class="hd">
+                <h1>{SField sid="法律咨询数据源标签" FD="PubTitle" page="0"/}</h1>
+            </div>
+ 			<div class="hdcontent">
+            {SField sid="法律咨询数据源标签" FD="PubContent" page="0"/}
+            
+            </div>
+          <div class="tit">
+                <h3>最新咨询</h3>
+            </div>
+               <ul id="info-list" class="info-list">
+ {ZL.Label id="法律咨询调用标签"/}
+				</ul>
+
+        </div>
+    </div>
+</div>
+</div>
+    <div class="col-sub">
+<div class="box box-skin-yellow">
+    <div class="bd">
+        <div class="con">
+            <div class="hd">
+                <h3>其他咨询方式</h3>
+            </div>
+            <div class="other">
+                <p>咨询电话: 0791-<strong>8888888</strong></p>
+                <p>咨询QQ：<a style="cursor:pointer" onclick="javascript:document.location.href='Tencent://Message/?menu=yes&exe=&uin=1140485317&Site=优优网&info='"><img src="/Skin/gcwuliu/images/bao.gif" alt="QQ" /></a><a style="cursor:pointer" onclick="javascript:document.location.href='Tencent://Message/?menu=yes&exe=&uin=1239313219&Site=优优网&info='"><img src="/Skin/gcwuliu/images/bao.gif" alt="QQ" /></a></p>
+                <p>咨询邮箱: xxxxx@163.com</p>
+            </div>
+            <div class="con-gray">
+                <div class="bd">
+                  <p>1、请将事件发生的人物、地点、进程、涉及部门等关键要素表述清楚便于跟进；</p>
+                    <p>2、再愤怒也不许说脏话，该拥护的还必须拥护；</p>
+                    <p>3、对恶意围观或散播他人隐私的帖子，小编有权关门放狗；</p>
+                    <p>4、如有证据性材料，请以图片(限200K)或视频的形式上传；</p>
+                    <p>5、线索采用必奖，所以最好留下真实信息</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div style=" clear:both;"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

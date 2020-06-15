@@ -1,0 +1,104 @@
+﻿@charset "utf-8";
+/* Powered by Zoomla!逐浪CMS*/
+body,*{ margin:0; padding:0;}
+body{ font-size:12px; background:url(images/bg.jpg) repeat-x #4f90eb; }
+li{list-style:none;}
+img{border:none;}
+a{text-decoration:none; color:#414141;}
+a:hover{text-decoration:underline;}
+
+#box{background:url(images/bg_foot.jpg) repeat-x 50% bottom; HEIGHT: auto}
+
+#head,#nav,#info,#content_bootom,#foot{ margin:auto; width:929px; clear:both;}/*整体框架定义*/
+
+#info{height:28px; line-height:28px; background:url(images/top_info_bg.gif) repeat-x;}
+#info span{ display:block; width:300px; float:left; margin-left:20px;}
+#info ul{display:block; width:300px; float:right;}
+#info li,#info li a{ display:block;float:left;}
+
+#home_banner,#content{ margin:auto; width:929px; clear:both; background:#FFF;}/*白色底整体框架*/
+#h_box{ height:15px;background:url(images/c_bg.jpg) no-repeat; background-position:bottom;}
+#home_banner object{ display:block;margin:auto; width:924px;}
+
+#head{height:87px; background:url(images/head_bg.jpg);}
+#nav{height:38px; background:url(images/nav_bg.gif);}
+
+.banner{margin:auto; width:929px; clear:both;height:124px;background:url(images/head_bg.jpg);position:relative;}
+.tel{position:absolute;right:6px; top:92px; color:#FFF; height:32px; line-height:32px;background:url(/skin/Company/images/tel.gif) no-repeat; background-position:0px 8px; padding-left:26px;}
+
+.menu{font-size:14px; margin:0;padding:0; background:url(images/nav_bg.gif); width:100%; height:38px;*height:37px; line-height:38px;*line-height:37px;}   
+.menu ul{list-style:none;}   
+.menu li {float:left;position:relative; padding-left:0px; font-weight:bold; text-align:center;}   
+.menu ul ul {visibility:hidden;position:absolute;}   
+.menu table {position:absolute; top:0; left:0;}   
+.menu ul li:hover ul, .menu ul a:hover ul{visibility:visible;}   
+.menu a{background:#;padding:0;margin:0;color:#fff;text-decoration:none; display:block; margin-left:3px;}   
+.menu a:hover{background:url(/skin/Company/images/menu_hover.gif) center no-repeat;color:#fff; height:37px; display:block; margin-left:3px;}  
+.menu ul ul{ list-style-type:none;}   
+.menu ul ul li {clear:both;text-align:left;font-size:12px;}   
+.menu ul ul li a{width:;height:18px; background:none;margin:0;border:0;border-bottom:0; color:#4d4d4d; margin-left:8px; line-height:18px;}   
+.menu ul ul li a:hover{border:0; height:18px;background:none;border-bottom:0; color:#4d4d4d; margin-left:8px; text-decoration:underline; line-height:18px}
+.menu ul ul li a.over{ background:none; color: #4d4d4d; line-height:18px;display:block;text-decoration:underline;height:18px;overflow:hidden;}
+.menu ul ul li a.cur{ background:none; color: #4d4d4d; line-height:18px;display:block;height:18px;overflow:hidden;}
+
+.logo{width:166px;height:87px;float:left;}
+.righttext{float:right;width:480px;height:33px;margin-top:38px;font-size:14px;color:#FFFFFF; font-weight:bold; text-align:right;}
+.righttext ul{margin:0px;padding:0px;}
+.righttext li{float:left;margin:0px;padding:0px;}
+.ulist{margin:0px;padding:0px;float:right;}	
+
+.menu2{font-size:12px;position:relative;z-index:100; width:199px; margin:0;padding:0; float:right;}   
+.menu2 ul{list-style:none;}   
+.menu2 li {float:left;position:relative; padding-left:1px; font-weight:bold;}   
+.menu2 ul ul {visibility:hidden;position:absolute;left:3px;top:13px;}   
+.menu2 table {position:absolute; top:0; left:0;}   
+.menu2 ul li:hover ul,   
+.menu2 ul a:hover ul{visibility:visible;}   
+.menu2 a{display:block;background:#;padding:0;margin:0;color:#fff;text-decoration:none;}   
+.menu2 a:hover{background:;color:#e4effa; }   
+.menu2 ul ul{}   
+.menu2 ul ul li {clear:both;text-align:left;font-size:12px;}   
+.menu2 ul ul li a{display:;width:;height:13px;margin:0;border:0;border-bottom:0; color:#414141; font-weight:normal; line-height:15px; padding-left:6px;}   
+.menu2 ul ul li a:hover{border:0;background:;border-bottom:0; color:#414141; font-weight:normal; line-height:15px; text-decoration:underline;}
+
+.pro_bg{background:url(/skin/Company/images/icon_01.gif) left -1169px no-repeat;width:519px;height:162px;left:2px;z-index:999;position:absolute;top:32px;}
+.pro_bg_s{background:url(/skin/Company/images/icon_01.gif) left -260px no-repeat;width:387px;height:162px;left:0px;z-index:999;position:absolute;top:31px;overflow:hidden;}
+.pro_bg_3{background:url(/skin/Company/images/icon_01.gif) left -440px no-repeat;width:394px;height:162px;left:-1px;z-index:999;position:absolute;top:29px;overflow:idden;}
+.pro_bg_4{background:url(/skin/Company/images/icon_01.gif) left -610px no-repeat;width:108px;height:86px;left:0px;z-index:999;position:absolute;top:30px;overflow:hidden;}
+.pro_bg_5{background:url(/skin/Company/images/icon_01.gif) left -710px no-repeat;width:198px;height:140px;left:1px;z-index:999;position:absolute;top:32px;}
+
+.produt_all{width:auto;height:140px;float:left;margin-top:22px;line-height:18px;font-family:Arial;}
+.produt_all_s{width:140px;height:140px;float:left;margin-top:22px;line-height:18px;}
+.produt_all_5{width:90px;height:140px;float:left;margin-top:22px;line-height:18px;}
+
+.chanpin_list{width:100%;height:17px;color:#4d4d4d;font-size:12px;margin:1px 0px 1px 7px;padding:0px;font-weight:normal;line-height:17px;background:url(/skin/Company/images/to_ico.gif) no-repeat;}
+
+
+.content01 { margin:auto;width:925px;padding-top:8px;padding-bottom:8px;	background-color:#ebf5fc;overflow:hidden;}
+.content01_left {width:702px;float:left;}
+.topnav {height:32px;width:702px;background-image:url(/skin/Company/images/topnav_bg_1.gif);background-repeat:no-repeat;}
+.topnav ul {padding:0px;margin:0px;	list-style-type:none;}
+.topnav ul li {background-image:url(/skin/Company/images/content01_topnav.gif);	background-repeat:no-repeat;height:21px;width:92px;	text-align:center;color:#FFFFFF;font-weight:bold;float:left;padding-top:10px;cursor:pointer;font-size:12px;}
+.topnav_01 {background-image:url(/skin/Company/images/content01_topnav01.gif)!important;background-repeat:no-repeat;height:24px;width:105px!important;color:#006a28!important;	font-size:14px!important;text-align:center;	font-weight:bold;float:left;padding-top:7px;}
+.topnav_01_ {background-image:url(/skin/Company/images/content01_topnav01_.gif)!important;background-repeat:no-repeat;	height:24px;width:105px!important;color:#006a28!important;font-size:14px!important;text-align:center;font-weight:bold;float:left;	padding-top:7px;}
+.content02 {width:702px;background-image:url(/skin/Company/images/content02_bg.gif);background-repeat:no-repeat;background-position:center top;float:left;overflow:hidden;}
+.content02_foot_bg {width:702px;background-image:url(/skin/Company/images/content02_foot_bg.gif);background-repeat:no-repeat;background-position:center bottom;float:left;overflow:hidden;}
+
+.home_news{}
+.home_news ul{ display:block;height:253px; margin:10px;}
+.home_news li{ height:28px; line-height:28px; float:left; width:45%; padding-left:20px;}
+.home_news li span{float:right;}
+.home_news ul img{float:left; border:1px solid #8099b8; width:125px; height:200px;}
+.home_news ul p{float:right; display:block; width:540px; margin-right:5px; line-height:22px; text-indent:28px;}
+
+#content_r{float: right; width:220px;}
+#content_r strong{display:block; height:24px; line-height:24px; background:url(/skin/Company/images/icon_02.gif) no-repeat; background-position:60px 5px;color:#03447a; font-size:14px; margin-top:5px;}
+#content_r img{ border:1px solid #0FF; padding:3px; margin-top:2px; width:208px; height:66px;}
+
+#content_bootom{ height:15px; background:url(images/c_bg.jpg) no-repeat;}
+
+#foot{height:120px; color:#FFF;}
+#foot img{margin-top:10px; float:left; margin-right:20px;}
+#foot a{color:#FFF;}
+#foot ul{margin-top:20px; line-height:26px;}
+#foot li{float:left; margin-right:10px;}

@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>418</LabelID>
+    <LabelName>友情链接调用标签</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_YQLJ分页标签</LabelDesc>
+    <LabelParam>ShowNum,0,1,显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Pub_YQLJ</LabelTable>
+    <LabelField>PubContent,PubTitle</LabelField>
+    <LabelWhere>ZL_Pub_YQLJ.Pubupid=7 And PubTitle like '%http://%'</LabelWhere>
+    <LabelOrder>ZL_Pub_YQLJ.ID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="{Field="PubTitle"/}" title="{Field="PubContent"/}" target="_blank"&gt;{Field="PubContent"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

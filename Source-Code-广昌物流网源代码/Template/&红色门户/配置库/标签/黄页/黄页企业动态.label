@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Table>
+    <LabelID>403</LabelID>
+    <LabelName>黄页企业动态</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>uname,默认值,1,会员名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel</LabelTable>
+    <LabelField>CreateTime,GeneralID,Title</LabelField>
+    <LabelWhere>NodeID=40 And Status=99 And Inputer='@uname'</LabelWhere>
+    <LabelOrder>GeneralID DESC</LabelOrder>
+    <LabelContent>&lt;ul id="news"&gt;
+{Repeate}
+&lt;li&gt;&lt;span class="time"&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd)/}&lt;/span&gt;&lt;a href="http://win15:133/ColumnList.aspx?NodeID=52&amp;uid={$GetRequest(uid)$}&amp;ItemID={Field="GeneralID"/}"&gt;{Field="Title"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}
+&lt;/ul&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>30</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</DocumentElement>

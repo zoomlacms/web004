@@ -1,0 +1,7 @@
+body	{background:#c6e0f7;}
+#left_guide{width:169px;height:41px;line-height:41px;font-size:14px;padding-left:30px;color:#004997;cursor:pointer;}
+.left_gd_on{background:url(../image/left_bg3.gif) no-repeat;}
+.left_gd_in{background:url(../image/left_bg1.gif) no-repeat;}
+#left_guide_list li{width:194px;padding-left:5px;height:25px;line-height:25px;background:url(../image/left_bg2.gif) no-repeat bottom #fff;}
+#left_guide_list a{color:#000;}
+#left_guide_list a:hover{color:#FF0000;}

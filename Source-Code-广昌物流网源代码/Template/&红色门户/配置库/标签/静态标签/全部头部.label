@@ -1,0 +1,137 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>377</LabelID>
+    <LabelName>全部头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;!-- 网站顶部 --&gt;
+&lt;div id="TopBar"&gt;
+ &lt;p&gt;{$SiteName/}欢迎您！&lt;a href="/User/Register.aspx" target="_blank"&gt;&lt;strong&gt;注册&lt;/strong&gt;&lt;/a&gt;|&lt;a href="/User/" target="_blank"&gt;&lt;strong&gt;登陆&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt; 
+ &lt;ul id="TopNavBar"&gt;  
+  &lt;li class="swsy"&gt;&lt;a onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteURL/}');" href="#"&gt;设为首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="scbz"&gt;&lt;a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href);"&gt;收藏本站&lt;/a&gt;&lt;/li&gt;  
+     &lt;li class="gywm"&gt;&lt;a href="{ZL:GetNodeLinkUrl(35)/}" target="_blank"&gt; 关于我们&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;!-- 网站顶部结束 --&gt;
+&lt;!-- 网站头部 --&gt;
+&lt;div id="WebTop"&gt;
+&lt;div id="headBar"&gt;   
+ &lt;p id="logo"&gt;&lt;a href="/" target="_blank"&gt;&lt;img src="{$LogoUrl/}" border="0" /&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;div id="searchBar"&gt;
+ &lt;div id="findtit"&gt;
+    &lt;ul&gt;
+        &lt;li id="m01" class="sd01"&gt;找货源&lt;/li&gt;
+        &lt;li id="m02" class="sd02"&gt;找车源&lt;/li&gt;
+        &lt;li id="m03" class="sd02"&gt;找企业&lt;/li&gt;
+        &lt;li id="m04" class="sd02"&gt;找资讯&lt;/li&gt;
+    &lt;/ul&gt;
+ &lt;/div&gt; 
+ &lt;div style=" clear:both;"&gt;&lt;/div&gt; 
+&lt;script language="javascript"&gt; 
+    function show(obj) {
+        if (obj.value== "找货源") {
+            obj.value= "";
+        }
+    }
+    function yin(obj) {
+        if (obj.value== "") {
+            obj.value= "找货源";
+        }
+    }
+	function show2(obj) {
+        if (obj.value== "找车源") {
+            obj.value= "";
+        }
+    }
+    function yin2(obj) {
+        if (obj.value== "") {
+            obj.value= "找车源";
+        }
+    }
+	function show3(obj) {
+        if (obj.value== "找企业") {
+            obj.value= "";
+        }
+    }
+    function yin3(obj) {
+        if (obj.value== "") {
+            obj.value= "找企业";
+        }
+    }
+	function show4(obj) {
+        if (obj.value== "找资讯") {
+            obj.value= "";
+        }
+    }
+    function yin4(obj) {
+        if (obj.value== "") {
+            obj.value= "找资讯";
+        }
+    }
+&lt;/script&gt;
+
+ &lt;div id="c01" class="xxx"&gt; 
+ &lt;form action="NodePage.aspx" method="get" target="_blank"&gt; 
+ &lt;input type="hidden" id="NodeID" name="NodeID" value="15"&gt;
+ &lt;input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找货源" onClick="show(this)" onBlur="yin(this)"&gt;
+ &lt;input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" /&gt;
+ &lt;/form&gt;
+ &lt;/div&gt;
+ &lt;div id="c02" class="hidden xxx"&gt; 
+ &lt;form action="NodePage.aspx" method="get" target="_blank"&gt; 
+ &lt;input type="hidden" id="NodeID" name="NodeID" value="14"&gt;
+ &lt;input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找车源" onClick="show2(this)" onBlur="yin2(this)"&gt;
+ &lt;input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" /&gt;
+ &lt;/form&gt;
+ &lt;/div&gt;
+ &lt;div id="c03" class="hidden xxx"&gt; 
+  &lt;form action="NodePage.aspx" method="get" target="_blank"&gt; 
+ &lt;input type="hidden"  id="NodeID" name="NodeID" value="24"&gt;
+ &lt;input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找企业" onClick="show3(this)" onBlur="yin3(this)"&gt;
+ &lt;input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" /&gt;
+ &lt;/form&gt;
+ &lt;/div&gt;
+ &lt;div id="c04" class="hidden xxx"&gt; 
+  &lt;form action="NodePage.aspx" method="get" target="_blank"&gt; 
+ &lt;input type="hidden" id="NodeID" name="NodeID" value="1"&gt;
+ &lt;input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找资讯" onClick="show4(this)" onBlur="yin4(this)"&gt;
+ &lt;input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" /&gt;
+ &lt;/form&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div id="headRig"&gt;
+ &lt;div class="headRig2"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/OnlineService/ShowForm.aspx" target="_blank" title="物流通"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:void(0)" onClick="Load()" title="发布信息"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/User/PromotUnion/linkUnion.aspx" target="_blank" title="网站推广"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+ &lt;/div&gt;
+ &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/OnlineService/ShowForm.aspx" target="_blank"&gt;物流通&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/user"&gt;发布信息&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/User/PromotUnion/linkUnion.aspx" target="_blank"&gt; 网站推广&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- 网站头部结束 --&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

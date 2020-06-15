@@ -1,0 +1,412 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问{$SiteTitle/}_首页</title>
+<link href="../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+{$MetaKeywords/}
+{$MetaDescription/}
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+<script src="../../Skin/gcwuliu/js/gundong.js"></script>
+</head>
+<body>
+<!-- 网站顶部 -->
+<div id="TopBar">
+ <p>{$SiteName/}欢迎您！<a href="/User/Register.aspx" target="_blank"><strong>注册</strong></a>|<a href="/User/" target="_blank"><strong>登陆</strong></a></p> 
+ <ul id="TopNavBar">  
+  <li class="swsy"><a onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteURL/}');" href="#">设为首页</a></li>
+    <li class="scbz"><a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href);">收藏本站</a></li>  
+     <li class="gywm"><a href="{ZL:GetNodeLinkUrl(35)/}" target="_blank"> 关于我们</a></li>
+</ul></div>
+<!-- 网站顶部结束 -->
+<!-- 网站头部 -->
+<div id="WebTop">
+<div id="headBar">   
+ <p id="logo"><a href="/" target="_blank"><img src="{$LogoUrl/}" border="0" /></a></p>
+ <div id="searchBar">
+ <div id="findtit">
+    <ul>
+        <li id="m01" class="sd01">找货源</li>
+        <li id="m02" class="sd02">找车源</li>
+        <li id="m03" class="sd02">找企业</li>
+        <li id="m04" class="sd02">找资讯</li>
+    </ul>
+ </div> 
+ <div style=" clear:both;"></div> 
+<script language="javascript"> 
+    function show(obj) {
+        if (obj.value== "找货源") {
+            obj.value= "";
+        }
+    }
+    function yin(obj) {
+        if (obj.value== "") {
+            obj.value= "找货源";
+        }
+    }
+	function show2(obj) {
+        if (obj.value== "找车源") {
+            obj.value= "";
+        }
+    }
+    function yin2(obj) {
+        if (obj.value== "") {
+            obj.value= "找车源";
+        }
+    }
+	function show3(obj) {
+        if (obj.value== "找企业") {
+            obj.value= "";
+        }
+    }
+    function yin3(obj) {
+        if (obj.value== "") {
+            obj.value= "找企业";
+        }
+    }
+	function show4(obj) {
+        if (obj.value== "找资讯") {
+            obj.value= "";
+        }
+    }
+    function yin4(obj) {
+        if (obj.value== "") {
+            obj.value= "找资讯";
+        }
+    }
+</script>
+
+ <div id="c01" class="xxx"> 
+ <form action="NodePage.aspx" method="get" target="_blank"> 
+ <input type="hidden" id="NodeID" name="NodeID" value="15">
+ <input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找货源" onClick="show(this)" onBlur="yin(this)">
+ <input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" />
+ </form>
+ </div>
+ <div id="c02" class="hidden xxx"> 
+ <form action="NodePage.aspx" method="get" target="_blank"> 
+ <input type="hidden" id="NodeID" name="NodeID" value="14">
+ <input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找车源" onClick="show2(this)" onBlur="yin2(this)">
+ <input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" />
+ </form>
+ </div>
+ <div id="c03" class="hidden xxx"> 
+  <form action="NodePage.aspx" method="get" target="_blank"> 
+ <input type="hidden"  id="NodeID" name="NodeID" value="24">
+ <input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找企业" onClick="show3(this)" onBlur="yin3(this)">
+ <input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" />
+ </form>
+ </div>
+ <div id="c04" class="hidden xxx"> 
+  <form action="NodePage.aspx" method="get" target="_blank"> 
+ <input type="hidden" id="NodeID" name="NodeID" value="1">
+ <input type="text" name="key" id="key" style="width:275px; height:28px; line-height:28px; border:1px solid #999; margin-left:30px; margin-top:7px; float:left; font-size:14px;" value="找资讯" onClick="show4(this)" onBlur="yin4(this)">
+ <input type="image" src="../../Skin/gcwuliu/images/serch.gif" style=" padding-top:7px;" />
+ </form>
+ </div>
+ </div>
+ <div id="headRig">
+ <div class="headRig2">
+    <ul>
+        <li><a href="/OnlineService/ShowForm.aspx" target="_blank" title="物流通"></a></li>
+        <li><a href="javascript:void(0)" onClick="Load()" title="发布信息"></a></li>
+        <li><a href="/User/PromotUnion/linkUnion.aspx" target="_blank" title="网站推广"></a></li>
+    </ul>
+ </div>
+ <ul>
+    <li><a href="/OnlineService/ShowForm.aspx" target="_blank">物流通</a></li>
+    <li><a href="/user">发布信息</a></li>
+    <li><a href="/User/PromotUnion/linkUnion.aspx" target="_blank"> 网站推广</a></li>
+ </ul></div>
+ </div>
+</div>
+<!-- 网站头部结束 -->
+<div class="clear"></div>
+<!--网站导航-->
+<div id="navBar">
+<div id="nav">
+<div id="navUL">
+
+<ul><li><b><a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank">新闻资讯:</a></b></li><li><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">热点新闻</a></li><li>|</li>
+<li><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">行业资讯</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(6)/}" target="_blank">会员动态</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(7)/}" target="_blank">法律法规</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank">莲乡风采</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(9)/}" target="_blank">政策公告</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(10)/}" target="_blank">统计数据</a></li> </ul>
+
+<ul> <li><b><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">物流市场:</a></b></li><li><a href="{ZL:GetNodeLinkUrl(14)/}" target="_blank">车源信息</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(15)/}" target="_blank">货源信息</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(16)/}" target="_blank">专线信息</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(17)/}" target="_blank">招标投标</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(18)/}" target="_blank">物流软件</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(11)/}" target="_blank">展会信息</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">多式联运</a></li> </ul>
+<ul> <li><b><a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank">服务平台:</a></b></li><li><a href="{ZL:GetNodeLinkUrl(13)/}" target="_blank">运价指数</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(21)/}" target="_blank">物流学院</a></li><li>|</li><li><a href="http://t027.2010.hx008.cn/showforum-6.aspx" target="_blank">物流论证</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(19)/}" target="_blank">招聘求职</a></li><li>|</li><li><a href="http://t027.2010.hx008.cn/showforum-14.aspx" target="_blank">爱心家园</a></li><li>|</li><li><a href="http://t027.2010.hx008.cn/showforum-13.aspx" target="_blank">法律咨询</a></li><li>|</li><li><a href="{ZL:GetNodeLinkUrl(36)/}" target="_blank">配货站</a></li> </ul>
+</div>
+<div id="nav_rig">
+<a href="{ZL:GetNodeLinkUrl(35)/}" target="_blank"><img src="../../Skin/gcwuliu/images/wuliu.png" /></a>
+<p><span><a href="{ZL:GetNodeLinkUrl(20)/}" target="_blank">三维影像</a></span><span><a href="{ZL:GetNodeLinkUrl(15)/}" target="_blank">手机配货</a></span></p>
+</div> 
+</div>
+</div>
+<!--网站导航结束-->
+<!-- 网站主体 -->
+<div id="main">
+<div id="main_left">
+<div id="main_L_elit">
+<div id="main_L_eL">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(1)/}" target="_blank">物流资讯</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(2)/}" target="_blank">物流信息  </a></li>
+<li><a href="{ZL:GetNodeLinkUrl(24)/}" target="_blank">企业黄页</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(21)/}" target="_blank">物流学院</a></li>
+<li><a href="http://t027.2010.hx008.cn/" target="_blank">物流论坛 </a></li>
+</ul>
+</div><!--左侧导航-->
+<div id="main_L_eR">
+<div class="elit1">
+<div class="elit1_L" style=" padding-left:8px;">
+<div id="FocusViewer" isimage="true" textheight="24"></div>
+<script src="/js/bairongflash.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+var FocusViewer_focus_width=240
+var FocusViewer_focus_height=205
+var FocusViewer_text_height=0
+
+var FocusViewer_swf_height = FocusViewer_focus_height + FocusViewer_text_height
+
+var FocusViewer_pics='{ZL.Label id="兼容FF六图轮循_输出广告图片" NodeID="1" /}'
+var FocusViewer_links='{ZL.Label id="兼容FF六图轮循_输出广告链接" NodeID="1" /}'
+var FocusViewer_texts='{ZL.Label id="兼容FF六图轮循_输出广告标题" NodeID="1" /}'
+
+//alert(FocusViewer_texts);
+
+var FocusViewer_FocusFlash = new bairongFlash("/skin/default/focusviewer.swf", "focusflash", FocusViewer_focus_width, FocusViewer_swf_height, "7", "#ffffff", false, "High");
+FocusViewer_FocusFlash.addParam("allowScriptAccess", "sameDomain");
+FocusViewer_FocusFlash.addParam("menu", "false");
+FocusViewer_FocusFlash.addParam("wmode", "opaque");
+FocusViewer_FocusFlash.addVariable("pics", FocusViewer_pics);
+FocusViewer_FocusFlash.addVariable("links", FocusViewer_links);
+FocusViewer_FocusFlash.addVariable("texts", FocusViewer_texts);
+FocusViewer_FocusFlash.addVariable("borderwidth", FocusViewer_focus_width);
+FocusViewer_FocusFlash.addVariable("borderheight", FocusViewer_focus_height);
+FocusViewer_FocusFlash.addVariable("textheight", FocusViewer_text_height);
+FocusViewer_FocusFlash.write("FocusViewer");
+</script>
+</div>
+<div class="elit1_R">
+<b>{ZL.Label id="首页头条" NodeID="37" /}</b>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="37" TitleNum="30" ShowNum="14" /}
+</ul>
+<div class="zhaobiao">
+	<span><a href="{ZL:GetNodeLinkUrl(17)/}" target="_blank">更多>></a></span>{ZL.Label id="推荐招标公告" NodeID="17" /}
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="elit2">
+<div class="elitLi">
+<b class="rd"><span><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(4)/}" target="_blank"> 热点新闻</A></b>
+{ZL.Label id="推荐文章" NodeID="4" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="4" TitleNum="30" ShowNum="7" /}
+</ul>
+</div>
+<div class="elitLi">
+<b class="gn"><span><a href="{ZL:GetNodeLinkUrl(11)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(11)/}" target="_blank"> 展会信息</A></b>
+{ZL.Label id="推荐文章" NodeID="11" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="11" TitleNum="30" ShowNum="7" /}
+</ul>
+</div>
+<div class="elitLi">
+<b class="sn"><span><a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(8)/}" target="_blank">莲乡风采</A></b>
+{ZL.Label id="推荐文章" NodeID="8" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="8" TitleNum="30" ShowNum="8" /}
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<div class="elit_ban">
+<div class="elitLi2"><script type="text/javascript" src="{$AdDir/}/201010/1.js"></script></div>
+<div class="elitLi2"><script type="text/javascript" src="{$AdDir/}/201010/2.js"></script></div>
+<div class="elitLi2"><script type="text/javascript" src="{$AdDir/}/201010/1.js"></script></div>
+</div><!--广告-->
+<div class="clear"></div>
+<div class="elit3">
+<div class="elitLi">
+<b class="hyzx"><span><a href="{ZL:GetNodeLinkUrl(5)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(5)/}" target="_blank"> 行业资讯</A></b>
+{ZL.Label id="推荐文章" NodeID="5" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="5" TitleNum="30" ShowNum="8" /}
+</ul>
+</div>
+<div class="elitLi">
+<b class="flfg"><span><a href="{ZL:GetNodeLinkUrl(7)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(7)/}" target="_blank"> 法律法规</A></b>
+{ZL.Label id="推荐文章" NodeID="7" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="7" TitleNum="30" ShowNum="8" /}
+</ul>
+</div>
+<div class="elitLi">
+<b class="zcgg"><span><a href="{ZL:GetNodeLinkUrl(9)/}" target="_blank">更多>></a></span><A href="{ZL:GetNodeLinkUrl(9)/}" target="_blank"> 政策公告</A></b>
+{ZL.Label id="推荐文章" NodeID="9" /}
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="9" TitleNum="30" ShowNum="8" /}
+</ul>
+</div>
+</div>
+ </div><!--右侧内容-->
+</div>
+<div id="main_L_bot" >
+<div class="main_L_botl">
+<b>货源信息点击排行</b>
+<div id="gund1" class="gund1">
+<div id="gunlist" class="gunlist">
+<ul>
+{ZL.Label id="输出指定节点标题_货源信息" NodeID="15" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+</div>
+</div>
+<div class="main_L_botl">
+<b>车源信息点击排行</b>
+<div id="gund2" class="gund2">
+<div id="gunlist1" class="gunlist1">
+<ul>
+{ZL.Label id="输出指定节点标题_车源信息" NodeID="14" TitleNum="30" ShowNum="10" /}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><!-- 网站主体左 -->
+<div id="main_rig">
+<div class="main_rig_top"></div>
+<div class="rig_tit rigt1">会员中心</div>
+<div class="mainR_log">
+<iframe src="/login.aspx" width="180" height="100" scrolling="no" frameborder="0"></iframe>
+</div>
+<div class="rig_tit rigt2">服务</div>
+<div class="mainR_sev">
+<script>
+var uid='{ZL:GetuserID()/}';
+function denglv(ModelID,NodeID){
+	if(uid==''){
+		alert("你还没登陆,请先登陆");
+		window.location.href="/user/login.aspx";
+		}
+		else{
+			window.location.href="/User/Content/AddContent2.aspx?ModelID="+ModelID+"&NodeID="+NodeID+"";
+			}
+	}	
+</script>
+<ul>
+<li><a href="javascript:void(0)" onClick="denglv(43,15)">发布货源</a></li>        
+<li><a href="javascript:void(0)" onClick="denglv(43,14)">发布车源</a></li>
+<li><a href="javascript:void(0)" onClick="denglv(44,16)">发布专线</a></li>       
+<li><a href="javascript:void(0)" onClick="denglv(47,36)">发布配货站</a></li>
+</ul>
+</div>
+<div class="rig_tit rigt3">网站公告</div>
+<div class="mainR_gg">
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="32" TitleNum="25" ShowNum="6" /}
+</ul>
+</div>
+<div class="rig_tit rigt4">最新配货</div>
+
+<div class="Scroller" id="idScroller"> 
+<div class="ScrollMid" id="idScrollMid"> 
+<ul> 
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="15" TitleNum="25" ShowNum="10" /}
+</ul>
+</div></div>
+<div class="main_rban">
+<script type="text/javascript" src="{$AdDir/}/201010/3.js"></script>
+</div>
+<div class="rig_tit rigt5">企业展示</div>
+<div class="mainR_com">
+<ul>
+{ZL.Label id="输出最新企业信息" TitleNum="25" ShowNum="5" /}
+</ul>
+</div>
+<div class="main_rig_bot"></div>
+</div>
+<!-- 网站主体右 -->
+</div>
+<div style="clear:both;"></div>
+<div id="friendSite">
+<div id="friend_tit"><span><a href="{ZL:GetNodeLinkUrl(33)/}" target="_blank">申请友情链接 > > </a></span><b>友情链接</b></div>
+<div id="friend_cnt">
+<div id="friendImg">
+<ul>
+{ZL.Label id="友情链接缩略图列表输出" ShowNum="14" NodeID="33" /}
+</ul>
+<div style="clear:both;"></div>
+</div>
+<div id="friendwz">
+	<ul>
+    	{ZL.Label id="友情链接调用标签" ShowNum="20" /}
+    </ul>
+</div>
+</div>
+</div>
+
+<div style="clear:both;"></div>
+<!-- 网站底部 -->
+<div id="footBar">
+<div id="footnav">
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(35)/}" target="_blank">关于我们</a></li><li> |</li>
+ <li><a href="{ZL:GetInfoUrl(389)/}" target="_blank">版权声明</a></li><li> |</li>
+ <li><a href="{ZL:GetInfoUrl(390)/}" target="_blank">隐私保护 </a></li><li> |</li>
+ <li><a href="/user" target="_blank">会员中心 </a></li><li> |</li>
+ <li><a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.location.href);">收藏本站 </a></li><li> |</li>
+ <li><a href="{ZL:GetInfoUrl(391)/}" target="_blank"> 联系我们 </a></li><li> |</li> 
+ <li><a href="{ZL:GetNodeLinkUrl(19)/}" target="_blank">招聘信息 </a></li>
+</ul>
+</div>
+<div id="copyRight">
+{$Copyright/}
+</div>
+</div>
+<!-- 网站底部结束 -->
+<script>var companyname = "{$SiteName/}";</script>
+<script src="OnlineService/js/kf.js"></script>
+</body>
+</html>
+<SCRIPT> 
+new Scroller("idScroller", "idScrollMid",{ Side:["up",""], PauseHeight:25, PauseWidth:190 }); 
+new Scroller("gund1", "gunlist",{ Side:["up",""], PauseHeight:20, PauseWidth:190 });
+new Scroller("gund2", "gunlist1",{ Side:["up",""], PauseHeight:20, PauseWidth:190 });
+</SCRIPT>

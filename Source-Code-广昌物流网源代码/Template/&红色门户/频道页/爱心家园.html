@@ -1,0 +1,165 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+sd : function(menus,divs,openClass,closeClass){
+	var _this = this;
+	if(menus.length != divs.length)
+	{
+		alert("菜单层数量和内容层数量不一样!");
+		return false;
+	}				
+	for(var i = 0 ; i < menus.length ; i++)
+	{	
+		_this.$(menus[i]).value = i;				
+		_this.$(menus[i]).onclick = function(){
+				
+			for(var j = 0 ; j < menus.length ; j++)
+			{						
+				_this.$(menus[j]).className = closeClass;
+				_this.$(divs[j]).style.display = "none";
+			}
+			_this.$(menus[this.value]).className = openClass;	
+			_this.$(divs[this.value]).style.display = "block";				
+		}
+	}
+	},
+$ : function(oid){
+	if(typeof(oid) == "string")
+	return document.getElementById(oid);
+	return oid;
+}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+<style>
+	#nav .menu{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/} a{ color:#FF0;}
+</style>
+</head>
+
+<body>
+<!-- 网站头部开始 -->
+{ZL.Label id="全部头部"/}
+<!-- 网站头部结束 -->
+<!--网站导航-->
+{ZL.Label id="网站导航"/}
+<!--网站导航结束-->
+<div id="love_main">
+<div id="love_l">
+<div id="love1">
+<div class="love1_l">
+<div class="hdp">
+    <div id="FocusViewer" isimage="true" textheight="24"></div>
+    <script src="/js/bairongflash.js" type="text/javascript"></script>
+    <script language="JavaScript" type="text/javascript">
+var FocusViewer_focus_width=280
+var FocusViewer_focus_height=220
+var FocusViewer_text_height=0
+
+var FocusViewer_swf_height = FocusViewer_focus_height + FocusViewer_text_height
+
+var FocusViewer_pics='{ZL.Label id="兼容FF六图轮循_输出广告图片" NodeID="1" /}'
+var FocusViewer_links='{ZL.Label id="兼容FF六图轮循_输出广告链接" NodeID="1" /}'
+var FocusViewer_texts='{ZL.Label id="兼容FF六图轮循_输出广告标题" NodeID="1" /}'
+
+//alert(FocusViewer_texts);
+
+var FocusViewer_FocusFlash = new bairongFlash("/skin/default/focusviewer.swf", "focusflash", FocusViewer_focus_width, FocusViewer_swf_height, "7", "#ffffff", false, "High");
+FocusViewer_FocusFlash.addParam("allowScriptAccess", "sameDomain");
+FocusViewer_FocusFlash.addParam("menu", "false");
+FocusViewer_FocusFlash.addParam("wmode", "opaque");
+FocusViewer_FocusFlash.addVariable("pics", FocusViewer_pics);
+FocusViewer_FocusFlash.addVariable("links", FocusViewer_links);
+FocusViewer_FocusFlash.addVariable("texts", FocusViewer_texts);
+FocusViewer_FocusFlash.addVariable("borderwidth", FocusViewer_focus_width);
+FocusViewer_FocusFlash.addVariable("borderheight", FocusViewer_focus_height);
+FocusViewer_FocusFlash.addVariable("textheight", FocusViewer_text_height);
+FocusViewer_FocusFlash.write("FocusViewer");
+</script> 
+</div>
+<div id="tbgz">
+	<div class="tbgz_tit"><span><a href="{ZL:GetNodeLinkUrl(164)/}" target="_blank">MORE</a></span><p>特别关注</p></div>
+    <ul>
+    	{ZL.Label id="输出指定节点标题_无时间属性" NodeID="164" TitleNum="30" ShowNum="5" /}
+    </ul>
+</div>
+
+</div>
+<div class="love1_r">
+    {ZL.Label id="爱心家园头条" NodeID="164" /} 
+</div>
+<div class="love2">
+	
+</div>
+</div>
+<div class="clear"></div>
+<div id="love2">
+	<div class="love2_tit"><span><a href="{ZL:GetNodeLinkUrl(160)/}" target="_blank">MORE</a></span><p>爱的期待</p></div>
+    <div class="love2_pic">
+    	<ul>
+        	{ZL.Label id="输出指定节点缩略图与标题列表" NodeID="160" TitleNum="20" ShowNum="5" /}
+        </ul>
+    </div>
+</div>
+
+<div id="love2">
+	<div class="love2_tit"><span><a href="{ZL:GetNodeLinkUrl(161)/}" target="_blank">MORE</a></span><p>活动图片</p></div>
+    <div class="love2_pic">
+    	<ul>
+        	{ZL.Label id="输出指定节点缩略图与标题列表" NodeID="161" TitleNum="20" ShowNum="5" /}
+        </ul>
+    </div>
+</div>
+
+
+</div>
+<div id="love_r">
+<div id="love3">
+    <div class="love3_tit"><span><a href="{ZL:GetNodeLinkUrl(158)/}" target="_blank">MORE</a></span><p>爱心动态</p></div>
+    <ul>
+    	{ZL.Label id="输出指定节点标题_无时间属性" NodeID="158" TitleNum="30" ShowNum="8" /}
+    </ul>
+</div>
+<div id="baba"><img src="../../../Skin/gcwuliu/images/201031517129420_0.jpg" /></div>
+<div id="love3">
+    <div class="love3_tit"><span><a href="{ZL:GetNodeLinkUrl(162)/}" target="_blank">MORE</a></span><p>公益知道</p></div>
+    <ul>
+    	{ZL.Label id="输出指定节点标题_无时间属性" NodeID="162" TitleNum="30" ShowNum="8" /}
+    </ul>
+</div>
+<div id="baba"><img src="../../../Skin/gcwuliu/images/201031517129420_0.jpg" /></div>
+<div id="love3">
+    <div class="love3_tit"><span><a href="{ZL:GetNodeLinkUrl(163)/}" target="_blank">MORE</a></span><p>爱心热线</p></div>
+    <ul>
+    	{ZL.Label id="慈善热线" NodeID="163" ShowNum="8" /}
+    </ul>
+</div>
+</div>
+<div class="clear"></div>
+<div style=" padding:10px; width:960px; overflow:hidden;"><img src="../../../Skin/gcwuliu/images/aixin.gif" /></div>
+<div id="love2">
+	<div class="love2_tit"><span><a href="{ZL:GetNodeLinkUrl(159)/}" target="_blank">MORE</a></span><p>爱心人士</p></div>
+    <div class="love3_pic">
+    	<ul>
+        	{ZL.Label id="输出指定节点缩略图与标题列表" NodeID="159" TitleNum="20" ShowNum="7" /}
+        </ul>
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>

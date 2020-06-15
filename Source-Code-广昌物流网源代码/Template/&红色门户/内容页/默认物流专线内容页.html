@@ -1,0 +1,123 @@
+﻿{ZL.Source id="物流专线数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="物流专线数据源标签" FD="Title" page="0"/}_{$SiteName/}_内容正文</title>
+<meta name="Keywords" content="{SField sid="物流专线数据源标签" FD="Tagkey" page="0"/}" />
+<link href="../../../Skin/gcwuliu/global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+<script>
+function scrollDoor(){
+}
+scrollDoor.prototype = {
+	sd : function(menus,divs,openClass,closeClass){
+		var _this = this;
+		if(menus.length != divs.length)
+		{
+			alert("菜单层数量和内容层数量不一样!");
+			return false;
+		}				
+		for(var i = 0 ; i < menus.length ; i++)
+		{	
+			_this.$(menus[i]).value = i;				
+			_this.$(menus[i]).onclick = function(){
+					
+				for(var j = 0 ; j < menus.length ; j++)
+				{						
+					_this.$(menus[j]).className = closeClass;
+					_this.$(divs[j]).style.display = "none";
+				}
+				_this.$(menus[this.value]).className = openClass;	
+				_this.$(divs[this.value]).style.display = "block";				
+			}
+		}
+		},
+	$ : function(oid){
+		if(typeof(oid) == "string")
+		return document.getElementById(oid);
+		return oid;
+	}
+}
+window.onload = function(){
+	var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02","m03","m04"],["c01","c02","c03","c04"],"sd01","sd02");
+}
+</script>
+</head>
+
+<body>
+{ZL.Label id="全部头部"/}
+ <!-- 网站头部结束 -->
+ <!--网站导航-->
+ {ZL.Label id="网站导航"/}
+  <!--网站导航结束-->
+<!-- 网站主体 -->
+<div id="mysite">
+	<p>您的位置：<a href="/">{$SiteName/}</a>>>{ZL.Label id="抽取父节点ID名与链接" NodeID="{SField sid="物流专线数据源标签" FD="NodeID" page="0"/}" /}>><a href="{ZL:GetNodeUrl({SField sid="物流专线数据源标签" FD="NodeID" page="0"/})/}">{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="物流专线数据源标签" FD="NodeID" page="0"/}" /}</a>>>{SField sid="物流专线数据源标签" FD="Title" page="0"/}</p>
+
+</div>
+<div id="main">
+<div id="main_left">
+
+<div id="neirong">
+	<h1>{SField sid="物流专线数据源标签" FD="Title" page="0"/}</h1>
+    
+    <abbr><span id="author">作者：{SField sid="物流专线数据源标签" FD="InPuter" page="0"/}</span> <span id="source">来源：{SField sid="物流专线数据源标签" FD="source" page="0"/}</span> <span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="物流专线数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> <span id="Hits">点击数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="物流专线数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span></abbr>
+<div id="content">
+<div style=" float:left; ">
+<table width="100%" style=" text-align:center; background:#b9d8f3;" cellpadding="0" cellspacing="1">
+    	<tr style=" height:30px; background:#F4FAFF;">
+        	<th width="30%">始发地</th>
+            <th width="30%">目的地</th>
+            <th width="40%">途径城市</th>
+        </tr>
+      	<tr style=" height:30px; background:#fff;">
+            <td width="30%">{SField sid="物流专线数据源标签" FD="shifa" page="0"/}</td>
+            <td width="30%">{SField sid="物流专线数据源标签" FD="mudi" page="0"/}</td>
+            <td width="40%">{SField sid="物流专线数据源标签" FD="city" page="0"/}</td>
+        </tr>
+    </table>
+<div class="clear" style=" height:10px;"> </div>
+<table width="100%" style=" text-align:center; background:#b9d8f3;" cellpadding="0" cellspacing="1">
+    	<tr style=" height:30px; background:#F4FAFF;">
+        	<th width="20%">重量报价（元/吨）</th>
+            <th width="20%">体积报价（元/方）</th>
+            <th width="20%">包车报价（元）</th>
+            <th width="20%">公里数（公里）</th>
+            <th width="20%">时间（天）</th>
+        </tr>
+      	<tr style=" height:30px; background:#fff;">
+            <td width="20%">{SField sid="物流专线数据源标签" FD="zlbj" page="0"/}元</td>
+            <td width="20%">{SField sid="物流专线数据源标签" FD="tjbj" page="0"/}元</td>
+            <td width="20%">{SField sid="物流专线数据源标签" FD="bcbj" page="0"/}元</td>
+            <td width="20%">{SField sid="物流专线数据源标签" FD="gls" page="0"/}公里</td>
+            <td width="20%">{SField sid="物流专线数据源标签" FD="time" page="0"/}天</td>
+        </tr>
+    </table>
+<div class="clear" style=" height:10px;"> </div>
+<table width="100%" style=" background:#b9d8f3;" cellpadding="0" cellspacing="1">
+	<tr style=" height:30px; font-weight:bold; background:#F4FAFF;">
+    	<td>该专线相关内容补充</td>
+    </tr>
+    <tr style=" height:30px; background:#fff;">
+    	<td><p style=" padding:10px;">{SField sid="物流专线数据源标签" FD="neir" page="0"/}</p></td>
+    </tr>
+</table>
+</div>
+<div style=" width:1px; height:500px; float:right;"></div>
+</div>
+<div style=" clear:both;"></div>
+<div id="begin"><span id="asc">上一篇文章：{ZL.Label id="上一篇文章"/}</span> <span id="desc">下一篇文章：{ZL.Label id="下一篇文章"/}</span></div>
+
+</div>
+
+</div><!-- 网站主体左 -->
+{ZL.Label id="网站主体右"/}
+<!-- 网站主体右 -->
+</div>
+<div style=" clear:both;"></div>
+<!-- 网站底部 -->
+{ZL.Label id="全站底部"/}
+</body>
+</html>
