@@ -104,10 +104,4 @@ update zl_manager set adminpassword='7fef6171469e80d32c0559f88b377245' where adm
 ![系统效果图4](demo-show-系统效果图/04.jpg)
 ![系统效果图5](demo-show-系统效果图/05.jpg)
 ![系统效果图6](demo-show-系统效果图/06.jpg)
-![系统效果图6](demo-show-系统效果图/07.jpg)
-![系统效果图6](demo-show-系统效果图/08.jpg)
-![系统效果图6](demo-show-系统效果图/09.jpg)
-![系统效果图6](demo-show-系统效果图/10.jpg)
-![系统效果图6](demo-show-系统效果图/11.jpg)
-![系统效果图6](demo-show-系统效果图/12.jpg)
-![系统效果图6](demo-show-系统效果图/13.jpg)
+
